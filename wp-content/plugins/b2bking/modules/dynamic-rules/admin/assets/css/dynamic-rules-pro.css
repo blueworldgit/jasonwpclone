@@ -1,0 +1,2635 @@
+/* B2BKing Dynamic Rules Pro - Dynamic Rules Management */
+
+/* CSS Custom Properties for B2BKing Brand Colors */
+:root {
+    --b2bking-primary: #191821;
+    --b2bking-gold: #906a1d;
+    --b2bking-gold-light: #a67c1f;
+    --b2bking-gold-dark: #7a5a1a;
+    --b2bking-white: #ffffff;
+    --b2bking-gray-50: #f8f9fa;
+    --b2bking-gray-100: #f1f3f4;
+    --b2bking-gray-200: #e9ecef;
+    --b2bking-gray-300: #dee2e6;
+    --b2bking-gray-400: #ced4da;
+    --b2bking-gray-500: #6c757d;
+    --b2bking-gray-600: #495057;
+    --b2bking-gray-700: #343a40;
+    --b2bking-gray-800: #212529;
+    --b2bking-gray-900: #191821;
+    --b2bking-success: #28a745;
+    --b2bking-success-light: #d4edda;
+    --b2bking-danger: #dc3545;
+    --b2bking-danger-light: #f8d7da;
+    --b2bking-warning: #ffc107;
+    --b2bking-info: #17a2b8;
+    
+    /* Spacing */
+    --b2bking-spacing-xs: 4px;
+    --b2bking-spacing-sm: 8px;
+    --b2bking-spacing-md: 16px;
+    --b2bking-spacing-lg: 24px;
+    --b2bking-spacing-xl: 32px;
+    --b2bking-spacing-2xl: 48px;
+    
+    /* Border Radius */
+    --b2bking-radius-sm: 6px;
+    --b2bking-radius-md: 8px;
+    --b2bking-radius-lg: 12px;
+    --b2bking-radius-xl: 16px;
+    
+    /* Shadows */
+    --b2bking-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --b2bking-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --b2bking-shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.15);
+    --b2bking-shadow-xl: 0 16px 40px rgba(0, 0, 0, 0.2);
+    
+    /* Transitions */
+    --b2bking-transition: all 0.2s ease;
+    --b2bking-transition-slow: all 0.3s ease;
+}
+
+/* Main Container */
+#b2bking_dynamic_rules_pro_main_container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0;
+    background: var(--b2bking-white);
+    border-radius: var(--b2bking-radius-lg);
+    box-shadow: var(--b2bking-shadow-sm);
+    overflow: hidden;
+    margin-top: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    position: relative;
+}
+
+/* Header Section - Using RulesPro Header Design */
+.b2bking_rulespro_header {
+    background: linear-gradient(135deg, #191821 0%, #2a2838 100%);
+    padding: 20px 32px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.b2bking_rulespro_header_title {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    flex: 1;
+}
+
+.b2bking_rulespro_header_icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    padding: 8px;
+}
+
+.b2bking_rulespro_header_text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+    top: 2px;
+}
+
+.b2bking_rulespro_header_text h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    line-height: 1.2;
+}
+
+.b2bking_rulespro_header_text .b2bking_rulespro_header_subtitle {
+    margin: 0;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.4;
+}
+
+.b2bking_rulespro_header_actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.b2bking_rulespro_import_btn,
+.b2bking_rulespro_import_export_btn,
+.b2bking_rulespro_add_rule_btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.b2bking_rulespro_import_btn,
+.b2bking_rulespro_import_export_btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.b2bking_rulespro_import_btn:hover,
+.b2bking_rulespro_import_export_btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+}
+
+/* Disabled Import/Export Button */
+.b2bking_rulespro_import_export_btn_disabled {
+    opacity: 0.5 !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+    position: relative;
+    overflow: visible;
+}
+
+.b2bking_rulespro_import_export_btn_disabled:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    transform: none !important;
+}
+
+/* Coming Soon Badge */
+.b2bking_rulespro_coming_soon_badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: rgba(157, 157, 157, 0.9);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 600;
+    padding: 2px 5px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(4px);
+    z-index: 10;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.b2bking_rulespro_add_rule_btn {
+    background: #906a1d;
+    color: white;
+}
+
+.b2bking_rulespro_add_rule_btn:hover {
+    background: #7a5a1a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(144, 106, 29, 0.3);
+    color: white;
+}
+
+/* Button Styles */
+.b2bking_dynamic_rules_pro_btn_primary,
+.b2bking_dynamic_rules_pro_btn_secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--b2bking-spacing-sm);
+    padding: 12px 20px;
+    border: none;
+    border-radius: var(--b2bking-radius-md);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--b2bking-transition);
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+}
+
+.b2bking_dynamic_rules_pro_btn_primary {
+    background: var(--b2bking-gold);
+    color: var(--b2bking-white);
+    box-shadow: 0 2px 8px rgba(144, 106, 29, 0.3);
+}
+
+.b2bking_dynamic_rules_pro_btn_primary:hover {
+    background: var(--b2bking-gold-light);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(144, 106, 29, 0.4);
+    color: white;
+}
+
+.b2bking_dynamic_rules_pro_btn_primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(144, 106, 29, 0.3);
+}
+
+.b2bking_dynamic_rules_pro_btn_secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--b2bking-white);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.b2bking_dynamic_rules_pro_btn_secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+}
+
+/* Main Content */
+.b2bking_dynamic_rules_pro_content {
+    padding: var(--b2bking-spacing-xl);
+}
+
+
+/* Rules Management Section */
+.b2bking_dynamic_rules_pro_rules_section {
+    background: var(--b2bking-white);
+    border: 1px solid var(--b2bking-gray-200);
+    border-radius: var(--b2bking-radius-lg);
+    overflow: hidden;
+}
+
+.b2bking_dynamic_rules_pro_section_header {
+    background: var(--b2bking-gray-50);
+    border-bottom: 1px solid var(--b2bking-gray-200);
+    padding: var(--b2bking-spacing-lg) var(--b2bking-spacing-xl);
+}
+
+.b2bking_dynamic_rules_pro_section_header h2 {
+    margin: 0 0 var(--b2bking-spacing-xs) 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--b2bking-primary);
+}
+
+.b2bking_dynamic_rules_pro_section_header p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--b2bking-gray-600);
+    line-height: 1.5;
+}
+
+.b2bking_dynamic_rules_pro_section_actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--b2bking-spacing-lg);
+    margin-top: var(--b2bking-spacing-md);
+}
+
+.b2bking_dynamic_rules_pro_search_container {
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+}
+
+.b2bking_dynamic_rules_pro_search_input {
+    width: 100%;
+    padding: 10px 16px 10px 40px;
+    border: 1px solid var(--b2bking-gray-300);
+    border-radius: var(--b2bking-radius-md);
+    font-size: 14px;
+    background: var(--b2bking-white);
+    transition: var(--b2bking-transition);
+}
+
+.b2bking_dynamic_rules_pro_search_input:focus {
+    outline: none;
+    border-color: var(--b2bking-gold);
+    box-shadow: 0 0 0 3px rgba(144, 106, 29, 0.1);
+}
+
+.b2bking_dynamic_rules_pro_search_icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    color: var(--b2bking-gray-400);
+    pointer-events: none;
+}
+
+.b2bking_dynamic_rules_pro_bulk_actions {
+    display: flex;
+    gap: var(--b2bking-spacing-sm);
+    align-items: center;
+}
+
+.b2bking_dynamic_rules_pro_bulk_select {
+    padding: 8px 12px;
+    border: 1px solid var(--b2bking-gray-300);
+    border-radius: var(--b2bking-radius-md);
+    font-size: 14px;
+    background: var(--b2bking-white);
+    color: var(--b2bking-gray-700);
+}
+
+.b2bking_dynamic_rules_pro_bulk_btn {
+    padding: 8px 16px;
+    border: 1px solid var(--b2bking-gray-300);
+    border-radius: var(--b2bking-radius-md);
+    font-size: 14px;
+    background: var(--b2bking-white);
+    color: var(--b2bking-gray-700);
+    cursor: pointer;
+    transition: var(--b2bking-transition);
+}
+
+.b2bking_dynamic_rules_pro_bulk_btn:hover {
+    background: var(--b2bking-gray-50);
+    border-color: var(--b2bking-gray-400);
+}
+
+/* Rules Grid */
+.b2bking_dynamic_rules_pro_rules_grid {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: var(--b2bking-spacing-lg);
+    padding: var(--b2bking-spacing-xl);
+}
+
+.b2bking_dynamic_rules_pro_rules_grid.active {
+    display: grid !important;
+}
+
+/* Rule Card */
+.b2bking_dynamic_rules_pro_rule_card {
+    background: var(--b2bking-white);
+    border: 1px solid var(--b2bking-gray-200);
+    border-radius: var(--b2bking-radius-lg);
+    padding: var(--b2bking-spacing-lg);
+    transition: var(--b2bking-transition);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Rule Type Visual Indicators */
+.b2bking_dynamic_rules_pro_rule_type_indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    border-radius: var(--b2bking-radius-lg) var(--b2bking-radius-lg) 0 0;
+    transition: var(--b2bking-transition);
+}
+
+/* Rule Type Icons */
+.b2bking_dynamic_rules_pro_rule_type_icon {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: var(--b2bking-transition);
+    flex-shrink: 0;
+    margin-right: 8px;
+}
+
+.b2bking_dynamic_rules_pro_rule_type_icon svg {
+    width: 17px;
+    height: 17px;
+}
+
+/* Discounts & Pricing Rule Types */
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="discount_amount"] .b2bking_dynamic_rules_pro_rule_type_indicator {
+    background: linear-gradient(90deg, #dc8562 0%, #fff 100%);
+}
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="discount_amount"] .b2bking_dynamic_rules_pro_rule_type_icon {
+    background: rgba(220, 38, 38, 0.1);
+    color: #DC2626;
+}
+
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="discount_percentage"] .b2bking_dynamic_rules_pro_rule_type_indicator {
+    background: linear-gradient(90deg, #dc8562 0%, #fff 100%);
+}
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="discount_percentage"] .b2bking_dynamic_rules_pro_rule_type_icon {
+    background: rgba(220, 38, 38, 0.1);
+    color: #DC2626;
+}
+
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="bogo_discount"] .b2bking_dynamic_rules_pro_rule_type_indicator {
+    background: linear-gradient(90deg, #dc8562 0%, #fff 100%);
+}
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="bogo_discount"] .b2bking_dynamic_rules_pro_rule_type_icon {
+    background: rgba(220, 38, 38, 0.1);
+    color: #DC2626;
+}
+
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="tiered_price"] .b2bking_dynamic_rules_pro_rule_type_indicator {
+    background: linear-gradient(90deg, #dc8562 0%, #fff 100%);
+}
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="tiered_price"] .b2bking_dynamic_rules_pro_rule_type_icon {
+    background: rgba(220, 38, 38, 0.1);
+    color: #DC2626;
+}
+
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="raise_price"] .b2bking_dynamic_rules_pro_rule_type_indicator {
+    background: linear-gradient(90deg, #dc8562 0%, #fff 100%);
+}
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="raise_price"] .b2bking_dynamic_rules_pro_rule_type_icon {
+    background: rgba(220, 38, 38, 0.1);
+    color: #DC2626;
+}
+
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="fixed_price"] .b2bking_dynamic_rules_pro_rule_type_indicator {
+    background: linear-gradient(90deg, #a8d4a8 0%, #fff 100%);
+}
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="fixed_price"] .b2bking_dynamic_rules_pro_rule_type_icon {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10B981;
+}
+
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="hidden_price"] .b2bking_dynamic_rules_pro_rule_type_indicator {
+    background: linear-gradient(90deg, #d1d5db 0%, #fff 100%);
+}
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="hidden_price"] .b2bking_dynamic_rules_pro_rule_type_icon {
+    background: rgba(156, 163, 175, 0.1);
+    color: #9CA3AF;
+}
+
+/* Order Rules */
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="minimum_order"] .b2bking_dynamic_rules_pro_rule_type_indicator {
+    background: linear-gradient(90deg, #ffd4a8 0%, #fff 100%);
+}
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="minimum_order"] .b2bking_dynamic_rules_pro_rule_type_icon {
+    background: rgba(245, 158, 11, 0.1);
+    color: #F59E0B;
+}
+
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="maximum_order"] .b2bking_dynamic_rules_pro_rule_type_indicator {
+    background: linear-gradient(90deg, #ffd4a8 0%, #fff 100%);
+}
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="maximum_order"] .b2bking_dynamic_rules_pro_rule_type_icon {
+    background: rgba(245, 158, 11, 0.1);
+    color: #F59E0B;
+}
+
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="required_multiple"] .b2bking_dynamic_rules_pro_rule_type_indicator {
+    background: linear-gradient(90deg, #ffd4a8 0%, #fff 100%);
+}
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="required_multiple"] .b2bking_dynamic_rules_pro_rule_type_icon {
+    background: rgba(245, 158, 11, 0.1);
+    color: #F59E0B;
+}
+
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="free_shipping"] .b2bking_dynamic_rules_pro_rule_type_indicator {
+    background: linear-gradient(90deg, #71a5fb 0%, #fff 100%);
+}
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="free_shipping"] .b2bking_dynamic_rules_pro_rule_type_icon {
+    background: rgba(59, 130, 246, 0.1);
+    color: #3B82F6;
+}
+
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="unpurchasable"] .b2bking_dynamic_rules_pro_rule_type_indicator {
+    background: linear-gradient(90deg, #c4c4c4 0%, #fff 100%);
+}
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="unpurchasable"] .b2bking_dynamic_rules_pro_rule_type_icon {
+    background: rgba(107, 114, 128, 0.1);
+    color: #6B7280;
+}
+
+/* Taxes */
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="tax_exemption_user"] .b2bking_dynamic_rules_pro_rule_type_indicator {
+    background: linear-gradient(90deg, #839afc 0%, #fff 100%);
+}
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="tax_exemption_user"] .b2bking_dynamic_rules_pro_rule_type_icon {
+    background: rgba(37, 99, 235, 0.1);
+    color: #2563EB;
+}
+
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="tax_exemption"] .b2bking_dynamic_rules_pro_rule_type_indicator {
+    background: linear-gradient(90deg, #839afc 0%, #fff 100%);
+}
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="tax_exemption"] .b2bking_dynamic_rules_pro_rule_type_icon {
+    background: rgba(37, 99, 235, 0.1);
+    color: #2563EB;
+}
+
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="add_tax_percentage"] .b2bking_dynamic_rules_pro_rule_type_indicator {
+    background: linear-gradient(90deg, #839afc 0%, #fff 100%);
+}
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="add_tax_percentage"] .b2bking_dynamic_rules_pro_rule_type_icon {
+    background: rgba(37, 99, 235, 0.1);
+    color: #2563EB;
+}
+
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="add_tax_amount"] .b2bking_dynamic_rules_pro_rule_type_indicator {
+    background: linear-gradient(90deg, #839afc 0%, #fff 100%);
+}
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="add_tax_amount"] .b2bking_dynamic_rules_pro_rule_type_icon {
+    background: rgba(37, 99, 235, 0.1);
+    color: #2563EB;
+}
+
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="set_currency_symbol"] .b2bking_dynamic_rules_pro_rule_type_indicator {
+    background: linear-gradient(90deg, #839afc 0%, #fff 100%);
+}
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="set_currency_symbol"] .b2bking_dynamic_rules_pro_rule_type_icon {
+    background: rgba(37, 99, 235, 0.1);
+    color: #2563EB;
+}
+
+/* Advanced Rules */
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="replace_prices_quote"] .b2bking_dynamic_rules_pro_rule_type_indicator {
+    background: linear-gradient(90deg, #b587fd 0%, #fff 100%);
+}
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="replace_prices_quote"] .b2bking_dynamic_rules_pro_rule_type_icon {
+    background: rgba(124, 58, 237, 0.1);
+    color: #7C3AED;
+}
+
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="quotes_products"] .b2bking_dynamic_rules_pro_rule_type_indicator {
+    background: linear-gradient(90deg, #b587fd 0%, #fff 100%);
+}
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="quotes_products"] .b2bking_dynamic_rules_pro_rule_type_icon {
+    background: rgba(124, 58, 237, 0.1);
+    color: #7C3AED;
+}
+
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="payment_method_minmax_order"] .b2bking_dynamic_rules_pro_rule_type_indicator {
+    background: linear-gradient(90deg, #a8f0e8 0%, #fff 100%);
+}
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="payment_method_minmax_order"] .b2bking_dynamic_rules_pro_rule_type_icon {
+    background: rgba(20, 184, 166, 0.1);
+    color: #14B8A6;
+}
+
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="payment_method_discount"] .b2bking_dynamic_rules_pro_rule_type_indicator {
+    background: linear-gradient(90deg, #a8f0e8 0%, #fff 100%);
+}
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="payment_method_discount"] .b2bking_dynamic_rules_pro_rule_type_icon {
+    background: rgba(20, 184, 166, 0.1);
+    color: #14B8A6;
+}
+
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="rename_purchase_order"] .b2bking_dynamic_rules_pro_rule_type_indicator {
+    background: linear-gradient(90deg, #a8f0e8 0%, #fff 100%);
+}
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="rename_purchase_order"] .b2bking_dynamic_rules_pro_rule_type_icon {
+    background: rgba(20, 184, 166, 0.1);
+    color: #14B8A6;
+}
+
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="payment_method_restriction"] .b2bking_dynamic_rules_pro_rule_type_indicator {
+    background: linear-gradient(90deg, #c4c4c4 0%, #fff 100%);
+}
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="payment_method_restriction"] .b2bking_dynamic_rules_pro_rule_type_icon {
+    background: rgba(107, 114, 128, 0.1);
+    color: #6B7280;
+}
+
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="shipping_method_restriction"] .b2bking_dynamic_rules_pro_rule_type_indicator {
+    background: linear-gradient(90deg, #c4c4c4 0%, #fff 100%);
+}
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="shipping_method_restriction"] .b2bking_dynamic_rules_pro_rule_type_icon {
+    background: rgba(107, 114, 128, 0.1);
+    color: #6B7280;
+}
+
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="info_table"] .b2bking_dynamic_rules_pro_rule_type_indicator {
+    background: linear-gradient(90deg, #d1d5db 0%, #fff 100%);
+}
+.b2bking_dynamic_rules_pro_rule_card[data-rule-type="info_table"] .b2bking_dynamic_rules_pro_rule_type_icon {
+    background: rgba(156, 163, 175, 0.1);
+    color: #9CA3AF;
+}
+
+.b2bking_dynamic_rules_pro_rule_card:not(.enabled) .b2bking_dynamic_rules_pro_rule_type_indicator {
+    display: none;
+}
+
+/* List View Rule Type Indicators */
+.b2bking_dynamic_rules_pro_rule_card.list_view .b2bking_dynamic_rules_pro_rule_type_indicator {
+    display: none;
+}
+
+.b2bking_dynamic_rules_pro_rule_card.list_view .b2bking_dynamic_rules_pro_rule_type_icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
+}
+
+.b2bking_dynamic_rules_pro_rule_card.list_view .b2bking_dynamic_rules_pro_rule_type_icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+.b2bking_dynamic_rules_pro_rule_card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--b2bking-gray-300) 0%, var(--b2bking-gray-400) 100%);
+    transition: var(--b2bking-transition);
+}
+
+.b2bking_dynamic_rules_pro_rule_card.enabled::before {
+    background: #bdbdbd;
+}
+
+
+
+.b2bking_dynamic_rules_pro_rule_card:hover {
+    /* Disabled transform to prevent jump effect */
+    /* transform: translateY(-2px); */
+    box-shadow: var(--b2bking-shadow-md);
+    border-color: var(--b2bking-gold);
+}
+
+/* Disabled rules hover with stronger gray */
+.b2bking_dynamic_rules_pro_rule_card:not(.enabled):hover {
+    border-color: #6b7280;
+}
+
+/* Ensure list view cards don't get the grid hover effects */
+.b2bking_dynamic_rules_pro_rule_card.list_view:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: #e9ecef;
+}
+
+.b2bking_dynamic_rules_pro_rule_card:hover::before {
+    background: linear-gradient(90deg, var(--b2bking-gold) 0%, var(--b2bking-gold-light) 100%);
+}
+
+/* Ensure enabled cards show gold on hover, overriding the green */
+.b2bking_dynamic_rules_pro_rule_card.enabled:hover::before {
+    background: linear-gradient(90deg, var(--b2bking-gold) 0%, var(--b2bking-gold-light) 100%);
+}
+
+/* Disabled rules hover with stronger gray top element */
+.b2bking_dynamic_rules_pro_rule_card:not(.enabled):hover::before {
+    background: linear-gradient(90deg, #9297a1 0%, #828b97 100%);
+}
+
+.b2bking_dynamic_rules_pro_rule_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--b2bking-spacing-md);
+}
+
+.b2bking_dynamic_rules_pro_rule_title {
+    flex: 1;
+    padding-right: 5px;
+}
+
+.b2bking_dynamic_rules_pro_rule_actions {
+    display: flex;
+    gap: var(--b2bking-spacing-sm);
+    align-items: center;
+}
+
+.b2bking_dynamic_rules_pro_rule_toggle {
+    background: none;
+    border: none;
+    padding: 4px;
+    border-radius: var(--b2bking-radius-sm);
+    transition: var(--b2bking-transition);
+    cursor: pointer;
+}
+
+.b2bking_dynamic_rules_pro_rule_toggle:hover {
+    background: var(--b2bking-gray-100);
+}
+
+.b2bking_dynamic_rules_pro_toggle_switch {
+    width: 40px;
+    height: 20px;
+    background: var(--b2bking-gray-300);
+    border-radius: 10px;
+    position: relative;
+    transition: var(--b2bking-transition);
+    cursor: pointer;
+    transform: scale(1.15);
+}
+
+.b2bking_dynamic_rules_pro_toggle_switch.active {
+    background: var(--b2bking-gold);
+}
+
+.b2bking_dynamic_rules_pro_toggle_thumb {
+    width: 16px;
+    height: 16px;
+    background: var(--b2bking-white);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: var(--b2bking-transition);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.b2bking_dynamic_rules_pro_toggle_switch.active .b2bking_dynamic_rules_pro_toggle_thumb {
+    transform: translateX(20px);
+}
+
+.b2bking_dynamic_rules_pro_rule_edit,
+.b2bking_dynamic_rules_pro_rule_delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--b2bking-gray-300);
+    border-radius: var(--b2bking-radius-md);
+    background: var(--b2bking-white);
+    color: var(--b2bking-gray-600);
+    text-decoration: none;
+    transition: var(--b2bking-transition);
+    cursor: pointer;
+    box-sizing: border-box !important;
+}
+
+.b2bking_dynamic_rules_pro_rule_edit:hover {
+    border-color: var(--b2bking-gold);
+    color: var(--b2bking-gold);
+    background: rgba(144, 106, 29, 0.05);
+}
+
+.b2bking_dynamic_rules_pro_rule_delete:hover {
+    border-color: var(--b2bking-danger);
+    color: var(--b2bking-danger);
+    background: rgba(220, 53, 69, 0.05);
+}
+
+.b2bking_dynamic_rules_pro_rule_content {
+    margin-top: var(--b2bking-spacing-md);
+}
+
+.b2bking_dynamic_rules_pro_rule_description {
+    margin-bottom: var(--b2bking-spacing-md);
+}
+
+.b2bking_dynamic_rules_pro_rule_description p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--b2bking-gray-600);
+    line-height: 1.5;
+}
+
+.b2bking_dynamic_rules_pro_rule_details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--b2bking-spacing-sm);
+}
+
+.b2bking_dynamic_rules_pro_rule_detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--b2bking-spacing-sm);
+    background: var(--b2bking-gray-50);
+    border-radius: var(--b2bking-radius-sm);
+}
+
+.b2bking_dynamic_rules_pro_rule_detail_label {
+    font-size: 12px;
+    color: var(--b2bking-gray-500);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-right: 8px;
+    white-space: nowrap;
+}
+
+.b2bking_dynamic_rules_pro_rule_detail_value {
+    font-size: 13px;
+    color: #4e4c56;
+    text-align: end;
+    font-weight: 450;
+}
+
+.b2bking_dynamic_rules_pro_rule_type{
+    color: var(--b2bking-primary);
+    font-weight: 600;
+    text-align: start;
+    display: inline-flex; 
+    font-size: 15px; 
+    align-items: center;
+}
+.b2bking_dynamic_rules_pro_rule_title_element {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #1f1f1f;
+    position: relative;
+    font-weight: 500;
+    top: 8px;
+    margin-bottom: 3px;
+    margin-left: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+}
+.b2bking_dynamic_rules_pro_rule_name{
+    width: fit-content;
+}
+.b2bking_dynamic_rules_pro_rule_title_element:hover {
+    color: var(--b2bking-primary);
+}
+.b2bking_dynamic_rules_pro_rule_title_element h4 {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Rule Type Detail with Icon */
+.b2bking_dynamic_rules_pro_rule_detail[data-detail-type="rule_type"] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.b2bking_dynamic_rules_pro_rule_detail[data-detail-type="rule_type"] .b2bking_dynamic_rules_pro_rule_detail_value {
+    display: flex;
+    align-items: center;
+    text-align: end;
+}
+
+/* List View Rule Type with Icon */
+.b2bking_dynamic_rules_pro_rule_type.list_view {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--b2bking-spacing-xs);
+}
+
+.b2bking_dynamic_rules_pro_rule_type.list_view .b2bking_dynamic_rules_pro_rule_type_value {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: normal;
+    text-align: left;
+    justify-content: flex-start;
+}
+
+
+
+/* Empty State */
+.b2bking_rulespro_empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 24px;
+    text-align: center;
+    color: #6c757d;
+}
+
+.b2bking_rulespro_empty_icon {
+    margin-bottom: 24px;
+    opacity: 0.5;
+}
+
+.b2bking_rulespro_empty h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #202224;
+}
+
+.b2bking_rulespro_empty p {
+    margin: 0 0 24px 0;
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 400px;
+}
+
+.b2bking_rulespro_empty_action_btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: #906a1d;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(144, 106, 29, 0.3);
+}
+
+.b2bking_rulespro_empty_action_btn:hover {
+    background: #a67c1f;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(144, 106, 29, 0.4);
+    color: white;
+}
+
+a.b2bking_rulespro_empty_action_btn:active, a.b2bking_rulespro_empty_action_btn:focus, .b2bking_rulespro_add_rule_btn:active, .b2bking_rulespro_add_rule_btn:focus {
+    color: white;
+    box-shadow: none;
+}
+
+
+/* Message System */
+.b2bking_dynamic_rules_pro_message {
+    position: fixed;
+    top: var(--b2bking-spacing-xl);
+    right: var(--b2bking-spacing-xl);
+    z-index: 10002;
+    max-width: 400px;
+    animation: b2bking_dynamic_rules_pro_messageSlideIn 0.3s ease;
+}
+
+@keyframes b2bking_dynamic_rules_pro_messageSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.b2bking_dynamic_rules_pro_message_content {
+    display: flex;
+    align-items: center;
+    gap: var(--b2bking-spacing-md);
+    padding: var(--b2bking-spacing-md) var(--b2bking-spacing-lg);
+    border-radius: var(--b2bking-radius-md);
+    box-shadow: var(--b2bking-shadow-lg);
+    position: relative;
+}
+
+.b2bking_dynamic_rules_pro_message.success .b2bking_dynamic_rules_pro_message_content {
+    background: var(--b2bking-success-light);
+    border: 1px solid var(--b2bking-success);
+    color: var(--b2bking-success);
+}
+
+.b2bking_dynamic_rules_pro_message.error .b2bking_dynamic_rules_pro_message_content {
+    background: var(--b2bking-danger-light);
+    border: 1px solid var(--b2bking-danger);
+    color: var(--b2bking-danger);
+}
+
+.b2bking_dynamic_rules_pro_message_icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.b2bking_dynamic_rules_pro_message.success .b2bking_dynamic_rules_pro_message_icon::before {
+    content: '✓';
+    font-weight: bold;
+}
+
+.b2bking_dynamic_rules_pro_message.error .b2bking_dynamic_rules_pro_message_icon::before {
+    content: '✕';
+    font-weight: bold;
+}
+
+.b2bking_dynamic_rules_pro_message_text {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.b2bking_dynamic_rules_pro_message_close {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: inherit;
+    opacity: 0.7;
+    transition: var(--b2bking-transition);
+}
+
+.b2bking_dynamic_rules_pro_message_close:hover {
+    opacity: 1;
+}
+
+/* Drag & Drop Styles */
+.b2bking_dynamic_rules_pro_rule_drag_handle {
+    position: absolute;
+    left: 1px;
+    top: 5px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9aa5b0;
+    cursor: grab;
+    transition: all 0.2s ease;
+    z-index: 10;
+    will-change: color, transform;
+    opacity: 0;
+    transform: scale(0.8);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+}
+
+.b2bking_dynamic_rules_pro_rule_drag_handle:hover {
+    color: var(--b2bking-gold);
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.b2bking_dynamic_rules_pro_rule_drag_handle:active {
+    cursor: grabbing;
+    transform: scale(0.95);
+}
+
+.b2bking_dynamic_rules_pro_rule_card {
+    padding: var(--b2bking-spacing-lg);
+    /* Disabled to prevent jump effect */
+    /* will-change: transform; */
+    /* backface-visibility: hidden; */
+    /* transform: translateZ(0); */
+    position: relative;
+}
+
+/* Show drag handle on card hover */
+.b2bking_dynamic_rules_pro_rule_card:hover .b2bking_dynamic_rules_pro_rule_drag_handle {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.b2bking_dynamic_rules_pro_rule_dragging {
+    opacity: 0.8;
+    transform: rotate(2deg) translateZ(0);
+    box-shadow: var(--b2bking-shadow-lg);
+    z-index: 1000;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Optimized helper styles for smooth dragging */
+.b2bking_dynamic_rules_pro_rule_helper {
+    transform: rotate(2deg) scale(1.02) translateZ(0) !important;
+    transition: none !important;
+    z-index: 9999 !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+    pointer-events: none !important;
+    will-change: transform !important;
+    backface-visibility: hidden !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+.b2bking_dynamic_rules_pro_rule_placeholder {
+    background: var(--b2bking-gray-100);
+    border: 2px dashed var(--b2bking-gold);
+    border-radius: var(--b2bking-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--b2bking-gold);
+    font-weight: 500;
+    position: relative;
+    will-change: auto;
+    backface-visibility: hidden;
+}
+
+/* List view placeholder - match rulespro exactly */
+#rules_list .b2bking_dynamic_rules_pro_rule_card.ui-sortable-placeholder {
+    background: rgba(144, 106, 29, 0.1) !important;
+    border: 2px dashed #906a1d !important;
+    height: 80px !important;
+    margin: 0 !important;
+    border-radius: 8px !important;
+}
+
+#rules_grid .b2bking_dynamic_rules_pro_rule_placeholder{
+    height: 280px !important;
+}
+#rules_list .b2bking_dynamic_rules_pro_rule_placeholder{
+    height: 112px !important;
+}
+
+.b2bking_dynamic_rules_pro_rule_placeholder{
+    background: rgba(144, 106, 29, 0.1) !important;
+}
+
+.b2bking_dynamic_rules_pro_rule_placeholder::before {
+    content: 'Drop rule here';
+    font-size: 14px;
+}
+
+/* Sortable container */
+.sortable-rules {
+    position: relative;
+    will-change: auto;
+}
+
+/* Disable text selection during drag */
+.b2bking_dynamic_rules_pro_rule_dragging * {
+    user-select: none !important;
+    pointer-events: none !important;
+}
+
+/* Ensure drag handle is visible during drag */
+.b2bking_dynamic_rules_pro_rule_dragging .b2bking_dynamic_rules_pro_rule_drag_handle {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+}
+
+/* Performance optimizations for drag operations */
+.ui-sortable-helper {
+    transform: rotate(2deg) scale(1.02) translateZ(0) !important;
+    transition: none !important;
+    will-change: transform !important;
+    backface-visibility: hidden !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Disable transitions during drag for better performance */
+.b2bking_dynamic_rules_pro_rule_card.ui-sortable-dragging {
+    transition: none !important;
+    will-change: auto !important;
+}
+
+/* Optimize hover states during drag */
+.sortable-rules.ui-sortable-disabled .b2bking_dynamic_rules_pro_rule_card:hover .b2bking_dynamic_rules_pro_rule_drag_handle {
+    color: var(--b2bking-gray-400);
+}
+
+/* View Toggle Styles */
+.b2bking_dynamic_rules_pro_view_toggle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--b2bking-gray-100);
+    border-radius: var(--b2bking-radius-md);
+    padding: 4px;
+}
+
+.b2bking_dynamic_rules_pro_view_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    color: var(--b2bking-gray-500);
+    border-radius: var(--b2bking-radius-sm);
+    cursor: pointer;
+    transition: var(--b2bking-transition);
+    position: relative;
+}
+
+.b2bking_dynamic_rules_pro_view_btn:hover {
+    background: var(--b2bking-gray-200);
+    color: var(--b2bking-gray-700);
+}
+
+.b2bking_dynamic_rules_pro_view_btn.active {
+    background: var(--b2bking-white);
+    color: var(--b2bking-gold);
+    box-shadow: var(--b2bking-shadow-sm);
+}
+
+.b2bking_dynamic_rules_pro_view_btn.active:hover {
+    background: var(--b2bking-white);
+    color: var(--b2bking-gold);
+}
+
+/* List View Styles */
+.b2bking_dynamic_rules_pro_rules_list {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+}
+
+.b2bking_dynamic_rules_pro_rules_list.active {
+    display: flex !important;
+}
+
+/* List View Rule Card - Matching RulesPro Design */
+.b2bking_dynamic_rules_pro_rule_card.list_view {
+    background: white;
+    border-bottom: 1px solid #e9ecef;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.2s ease;
+    position: relative;
+    border-radius: 0;
+    margin-bottom: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.b2bking_dynamic_rules_pro_rule_card.list_view:hover {
+    background: #f8f9fa;
+    transform: none;
+    box-shadow: none;
+}
+
+.b2bking_dynamic_rules_pro_rule_card.list_view:last-child {
+    border-bottom: none;
+}
+
+.b2bking_dynamic_rules_pro_rule_card.list_view::before {
+    display: none;
+}
+
+/* List View Rule Content */
+.b2bking_dynamic_rules_pro_rule_content.list_view {
+    display: grid;
+    grid-template-columns: 2.5fr 2.5fr 2fr 2fr 1fr auto;
+    gap: var(--b2bking-spacing-lg);
+    align-items: center;
+    flex: 1;
+    margin-top: 0;
+}
+
+.b2bking_dynamic_rules_pro_rule_info.list_view {
+    display: flex;
+    flex-direction: column;
+    gap: var(--b2bking-spacing-xs);
+}
+
+.b2bking_dynamic_rules_pro_rule_name.list_view {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--b2bking-primary);
+    margin: 0;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+}
+.b2bking_dynamic_rules_pro_rule_name.list_view:hover {
+    opacity: 0.8;
+}
+.b2bking_dynamic_rules_pro_rule_name.list_view h4 {
+    margin: 0;
+}
+
+.b2bking_dynamic_rules_pro_rule_description.list_view {
+    font-size: 14px;
+    color: var(--b2bking-gray-600);
+    margin: 0;
+}
+
+.b2bking_dynamic_rules_pro_rule_type.list_view,
+.b2bking_dynamic_rules_pro_rule_applies_to.list_view,
+.b2bking_dynamic_rules_pro_rule_customer_group.list_view,
+.b2bking_dynamic_rules_pro_rule_how_much.list_view,
+.b2bking_dynamic_rules_pro_rule_condition.list_view,
+.b2bking_dynamic_rules_pro_rule_groups.list_view,
+.b2bking_dynamic_rules_pro_rule_threshold.list_view {
+    display: flex;
+    flex-direction: column;
+    gap: var(--b2bking-spacing-xs);
+    min-width: 0;
+    overflow: hidden;
+}
+
+.b2bking_dynamic_rules_pro_rule_type_label.list_view,
+.b2bking_dynamic_rules_pro_rule_applies_to_label.list_view,
+.b2bking_dynamic_rules_pro_rule_customer_group_label.list_view,
+.b2bking_dynamic_rules_pro_rule_how_much_label.list_view,
+.b2bking_dynamic_rules_pro_rule_condition_label.list_view,
+.b2bking_dynamic_rules_pro_rule_groups_label.list_view,
+.b2bking_dynamic_rules_pro_rule_threshold_label.list_view {
+    font-size: 12px;
+    color: var(--b2bking-gray-500);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.b2bking_dynamic_rules_pro_rule_type_value.list_view,
+.b2bking_dynamic_rules_pro_rule_applies_to_value.list_view,
+.b2bking_dynamic_rules_pro_rule_customer_group_value.list_view,
+.b2bking_dynamic_rules_pro_rule_how_much_value.list_view,
+.b2bking_dynamic_rules_pro_rule_condition_value.list_view,
+.b2bking_dynamic_rules_pro_rule_groups_value.list_view,
+.b2bking_dynamic_rules_pro_rule_threshold_value.list_view {
+    font-size: 14px;
+    color: var(--b2bking-primary);
+    font-weight: 500;
+    margin: 0;
+    text-align: left;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.b2bking_dynamic_rules_pro_rule_actions.list_view {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+h2#swal2-title {
+    font-size: 15px;
+}
+
+/* RulesPro-style Toggle Switch for List View */
+.b2bking_dynamic_rules_pro_rule_toggle.list_view {
+    position: relative;
+}
+
+.b2bking_dynamic_rules_pro_rule_toggle_switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.b2bking_dynamic_rules_pro_rule_toggle_switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.b2bking_dynamic_rules_pro_rule_toggle_slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.3s;
+    border-radius: 24px;
+}
+
+.b2bking_dynamic_rules_pro_rule_toggle_slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.b2bking_dynamic_rules_pro_rule_toggle_switch input:checked + .b2bking_dynamic_rules_pro_rule_toggle_slider {
+    background-color: #906a1d;
+}
+
+.b2bking_dynamic_rules_pro_rule_toggle_switch input:checked + .b2bking_dynamic_rules_pro_rule_toggle_slider:before {
+    transform: translateX(20px);
+}
+
+/* RulesPro-style Action Buttons for List View */
+.b2bking_dynamic_rules_pro_rule_action_btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    background: white;
+    color: #6c757d;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    line-height: initial;
+}
+
+.b2bking_dynamic_rules_pro_rule_action_btn:hover {
+    background: #f8f9fa;
+    border-color: #906a1d;
+    color: #906a1d;
+}
+
+.b2bking_dynamic_rules_pro_rule_action_edit:hover {
+    background: #f8f9fa;
+    border-color: #906a1d;
+    color: #906a1d;
+}
+
+.b2bking_dynamic_rules_pro_rule_action_delete:hover {
+    background: #ffebee;
+    border-color: #f44336;
+    color: #f44336;
+}
+
+
+/* List View Drag Handle - Matching RulesPro */
+.b2bking_dynamic_rules_pro_rule_drag_handle.list_view {
+    width: 20px;
+    height: 20px;
+    color: #6c757d;
+    cursor: grab;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: static;
+    opacity: 1;
+    transform: scale(1);
+    background: none;
+    backdrop-filter: none;
+    border-radius: 0;
+}
+
+.b2bking_dynamic_rules_pro_rule_drag_handle.list_view:hover {
+    color: #906a1d;
+    transform: scale(1.1);
+    background: none;
+}
+
+.b2bking_dynamic_rules_pro_rule_drag_handle.list_view:active {
+    cursor: grabbing;
+    transform: scale(0.95);
+}
+
+.b2bking_dynamic_rules_pro_rule_drag_handle.list_view * {
+    pointer-events: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .b2bking_dynamic_rules_pro_rules_grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .b2bking_dynamic_rules_pro_rule_content.list_view {
+        grid-template-columns: 1fr;
+        gap: var(--b2bking-spacing-md);
+    }
+    
+    .b2bking_dynamic_rules_pro_rule_type.list_view,
+    .b2bking_dynamic_rules_pro_rule_applies_to.list_view,
+    .b2bking_dynamic_rules_pro_rule_customer_group.list_view,
+    .b2bking_dynamic_rules_pro_rule_how_much.list_view,
+    .b2bking_dynamic_rules_pro_rule_condition.list_view,
+    .b2bking_dynamic_rules_pro_rule_groups.list_view,
+    .b2bking_dynamic_rules_pro_rule_threshold.list_view {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--b2bking-spacing-sm);
+    }
+    
+    .b2bking_dynamic_rules_pro_rule_type_label.list_view,
+    .b2bking_dynamic_rules_pro_rule_applies_to_label.list_view,
+    .b2bking_dynamic_rules_pro_rule_customer_group_label.list_view,
+    .b2bking_dynamic_rules_pro_rule_how_much_label.list_view,
+    .b2bking_dynamic_rules_pro_rule_condition_label.list_view,
+    .b2bking_dynamic_rules_pro_rule_groups_label.list_view,
+    .b2bking_dynamic_rules_pro_rule_threshold_label.list_view {
+        margin: 0;
+        min-width: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .b2bking_rulespro_header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+    }
+
+    
+    .b2bking_dynamic_rules_pro_view_toggle{
+        margin-right: 0px;
+    }
+    
+    .b2bking_rulespro_header_actions {
+        justify-content: stretch;
+    }
+    
+    .b2bking_rulespro_import_btn,
+    .b2bking_rulespro_import_export_btn,
+    .b2bking_rulespro_import_export_btn_disabled,
+    .b2bking_rulespro_add_rule_btn {
+        flex: 1;
+        justify-content: center;
+    }
+    
+    .b2bking_dynamic_rules_pro_content {
+        padding: var(--b2bking-spacing-lg);
+    }
+    
+    .b2bking_dynamic_rules_pro_section_actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--b2bking-spacing-md);
+    }
+    
+    .b2bking_dynamic_rules_pro_search_container {
+        max-width: none;
+    }
+    
+    .b2bking_dynamic_rules_pro_rules_grid {
+        padding: var(--b2bking-spacing-lg);
+    }
+    
+    .b2bking_dynamic_rules_pro_message {
+        top: var(--b2bking-spacing-md);
+        right: var(--b2bking-spacing-md);
+        left: var(--b2bking-spacing-md);
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .b2bking_rulespro_header {
+        padding: 16px 20px;
+    }
+    
+    .b2bking_rulespro_header_text h1 {
+        font-size: 24px;
+    }
+    
+    .b2bking_rulespro_header_icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .b2bking_dynamic_rules_pro_content {
+        padding: var(--b2bking-spacing-md);
+        margin-bottom: 350px;
+    }
+    
+    .b2bking_dynamic_rules_pro_rule_header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--b2bking-spacing-md);
+    }
+    
+    .b2bking_dynamic_rules_pro_rule_actions {
+        justify-content: center;
+    }
+    
+    .b2bking_dynamic_rules_pro_rule_drag_handle {
+        width: 24px;
+        height: 24px;
+        left: var(--b2bking-spacing-sm);
+    }
+}
+
+/* Dark mode support (if needed) */
+@media (prefers-color-scheme: dark) {
+    /* Add dark mode styles here if needed */
+}
+
+/* Print styles */
+@media print {
+    .b2bking_rulespro_header_actions,
+    .b2bking_dynamic_rules_pro_section_actions,
+    .b2bking_dynamic_rules_pro_rule_actions,
+    .b2bking_dynamic_rules_pro_modal,
+    .b2bking_dynamic_rules_pro_message {
+        display: none !important;
+    }
+    
+    .b2bking_dynamic_rules_pro_rule_card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+}
+
+/* Animation for rule cards - Properly implemented to prevent jump */
+.b2bking_dynamic_rules_pro_rule_card {
+    /* Start invisible and offset - will be animated in */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.6s ease;
+}
+
+/* Cards that should not animate (subsequent loads) */
+.b2bking_dynamic_rules_pro_rule_card.no-animate {
+    opacity: 1;
+    transform: translateY(0);
+    transition: none;
+}
+
+.b2bking_dynamic_rules_pro_rule_card.animate-in.enabled {
+    /* Animate to final state */
+    opacity: 1;
+    transform: translateY(0);
+}
+.b2bking_dynamic_rules_pro_rule_card.animate-in:not(.enabled) {
+    /* Animate to final state */
+    opacity: 0.45;
+    transform: translateY(0);
+}
+.b2bking_dynamic_rules_pro_rule_card.no-animate:not(.enabled) {
+    transform: translateY(0);
+    opacity: 0.45;
+}
+
+/* Staggered animation delays - handled by JavaScript for scalability */
+
+@keyframes b2bking_dynamic_rules_pro_fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading State - Solid container-based approach */
+.b2bking_dynamic_rules_pro_loading_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 230px;
+    padding: 60px 20px;
+    text-align: center;
+    color: var(--b2bking-gray-500);
+}
+
+.b2bking_dynamic_rules_pro_loading_spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--b2bking-gray-200);
+    border-top: 3px solid var(--b2bking-gold);
+    border-radius: 50%;
+    animation: b2bking_dynamic_rules_pro_spin 1s linear infinite;
+    margin-bottom: 16px;
+}
+
+@keyframes b2bking_dynamic_rules_pro_spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.b2bking_dynamic_rules_pro_loading_container p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--b2bking-gray-600);
+}
+
+/* Content containers - hidden by default, shown when content is ready */
+.b2bking_dynamic_rules_pro_content_container {
+    display: none;
+}
+
+.b2bking_dynamic_rules_pro_content_container.show {
+    display: block;
+}
+
+/* Ensure grid containers don't take up space when hidden during loading */
+#rules_grid[style*="display: none"],
+#rules_list[style*="display: none"] {
+    display: none !important;
+}
+
+/* Force hide all view containers during loading state */
+body.loading #rules_grid,
+body.loading #rules_list {
+    display: none !important;
+}
+
+/* Additional specificity to override any view-switching CSS */
+body.loading #rules_grid.active,
+body.loading #rules_list.active,
+body.loading .b2bking_dynamic_rules_pro_view_grid #rules_grid,
+body.loading .b2bking_dynamic_rules_pro_view_list #rules_list {
+    display: none !important;
+}
+
+/* Hide empty grid containers that have active class but no content */
+#rules_grid.active:empty,
+#rules_list.active:empty {
+    display: none !important;
+}
+
+/* Critical: Always hide empty state during loading to prevent simultaneous display */
+body.loading #rules_empty {
+    display: none !important;
+}
+
+/* Center the paragraph in the empty state */
+div#rules_empty p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== Bulk Actions Styles ===== */
+
+/* Rule Selection Checkboxes */
+.b2bking_dynamic_rules_pro_rule_selection {
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Remove padding to give checkbox more space */
+    cursor: pointer; /* Make entire area clickable */
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+    position: relative; /* For proper centering of scaled checkbox */
+    min-width: 40px; /* Larger clickable area for grid view */
+    min-height: 40px; /* Larger clickable area for grid view */
+}
+
+.b2bking_dynamic_rules_pro_rule_selection:hover {
+    background-color: rgb(111 111 111 / 5%);
+}
+
+/* Grid view specific styling for selection area */
+.b2bking_dynamic_rules_pro_rule_selection:not(.list_view) {
+    margin-right: 5px;
+}
+
+/* Show checkboxes only when bulk actions are active */
+body.b2bking_bulk_actions_active .b2bking_dynamic_rules_pro_rule_selection {
+    display: flex;
+}
+
+/* Selected card effects */
+.b2bking_dynamic_rules_pro_rule_card.selected {
+    box-shadow: var(--b2bking-shadow-md);
+    border-color: #c5b595;
+    transition: all 0s ease;
+    transition-delay: 0s;
+    background: #906a1d0d;
+}
+.b2bking_dynamic_rules_pro_rule_card.selected .b2bking_dynamic_rules_pro_rule_detail {
+    background: #ffffff;
+    box-shadow: 0 1px 1px 1px #ece7df;
+}
+
+/* List view specific selected effect - subtle gold background */
+.b2bking_dynamic_rules_pro_rule_card.list_view.selected {
+    background: #906a1d0d;
+    border-top: 1px solid;
+    border-color: #c5b595;
+}
+
+.b2bking_dynamic_rules_pro_rule_selection.list_view {
+    padding: 12px 8px;
+    order: 2; /* Position after drag handle */
+}
+
+/* List view specific layout adjustments */
+.b2bking_dynamic_rules_pro_rule_card.list_view {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.b2bking_dynamic_rules_pro_rule_drag_handle.list_view {
+    order: 1; /* First position */
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.b2bking_dynamic_rules_pro_rule_content.list_view {
+    order: 3; /* Last position */
+    flex: 1;
+}
+
+.b2bking_dynamic_rules_pro_rule_checkbox {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #d1d5db;
+    border-radius: 4px;
+    background: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    margin: 0 !important; /* Override WordPress styles */
+}
+
+.b2bking_dynamic_rules_pro_rule_checkbox:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.b2bking_dynamic_rules_pro_rule_checkbox:checked {
+    background: #3b82f6;
+    border-color: #3b82f6;
+}
+
+.b2bking_dynamic_rules_pro_rule_checkbox:checked::after {
+    content: '';
+    position: absolute;
+    left: 3.2px;
+    top: 0px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(35deg) scale(0.88);
+}
+
+/* Bulk Actions Toolbar */
+.b2bking_dynamic_rules_pro_bulk_toolbar {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin: 0px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.b2bking_dynamic_rules_pro_bulk_toolbar_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    gap: 16px;
+}
+
+.b2bking_dynamic_rules_pro_bulk_toolbar_left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.b2bking_dynamic_rules_pro_bulk_toolbar_right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.b2bking_dynamic_rules_pro_bulk_selected_count {
+    font-weight: 400;
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+.b2bking_dynamic_rules_pro_bulk_count_number {
+    font-weight: 700;
+    color: #1f2937;
+    font-size: 14px;
+}
+
+/* Dynamic states for count and text */
+.b2bking_dynamic_rules_pro_bulk_selected_count.no-selection {
+    color: #9ca3af;
+}
+
+.b2bking_dynamic_rules_pro_bulk_selected_count.has-selection {
+    color: #656e7d;
+}
+
+.b2bking_dynamic_rules_pro_bulk_count_number.no-selection {
+    color: #7f8185;
+}
+
+.b2bking_dynamic_rules_pro_bulk_count_number.has-selection {
+    color: #1f2937;
+}
+
+.b2bking_dynamic_rules_pro_bulk_select_all,
+.b2bking_dynamic_rules_pro_bulk_deselect_all {
+    padding: 8px 12px;
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    color: #374151;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.b2bking_dynamic_rules_pro_bulk_select_all:hover,
+.b2bking_dynamic_rules_pro_bulk_deselect_all:hover {
+    background: #f9fafb;
+    border-color: #9ca3af;
+    transform: translateY(-1px);
+}
+
+/* Bulk Action Buttons */
+.b2bking_dynamic_rules_pro_bulk_action_btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.b2bking_dynamic_rules_pro_bulk_action_btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.b2bking_dynamic_rules_pro_bulk_action_btn:not(:disabled):hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.b2bking_dynamic_rules_pro_bulk_enable {
+    background: #6b7280;
+    color: white;
+}
+
+.b2bking_dynamic_rules_pro_bulk_enable:hover:not(:disabled) {
+    background: #4b5563;
+}
+
+.b2bking_dynamic_rules_pro_bulk_disable {
+    background: #6b7280;
+    color: white;
+}
+
+.b2bking_dynamic_rules_pro_bulk_disable:hover:not(:disabled) {
+    background: #4b5563;
+}
+
+.b2bking_dynamic_rules_pro_bulk_delete {
+    background: #de7070;
+    color: white;
+}
+
+.b2bking_dynamic_rules_pro_bulk_delete:hover:not(:disabled) {
+    background: #b91c1c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .b2bking_dynamic_rules_pro_bulk_toolbar_content {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+    
+    .b2bking_dynamic_rules_pro_bulk_toolbar_left,
+    .b2bking_dynamic_rules_pro_bulk_toolbar_right {
+        justify-content: center;
+    }
+    
+    .b2bking_dynamic_rules_pro_bulk_toolbar_right {
+        flex-wrap: wrap;
+    }
+    
+    .b2bking_dynamic_rules_pro_bulk_action_btn {
+        flex: 1;
+        min-width: 120px;
+        justify-content: center;
+    }
+}
+
+/* RulesPro Elements - Imported for Rule Editor 1 */
+
+/* Filters */
+.b2bking_rulespro_filters {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 0;
+    margin-bottom: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+/* Only apply transitions when user has interacted with the filter button */
+.b2bking_rulespro_filters.has-transition {
+    transition: max-height 0.2s ease-in-out, opacity 0.2s ease-in-out, padding 0.2s ease-in-out, margin 0.2s ease-in-out;
+}
+
+/* Show filters when there are 6+ rules */
+.b2bking_rulespro_filters.show-filters {
+    max-height: 500px; /* Adjust this value based on your content height */
+    opacity: 1;
+    padding: 24px;
+    margin-bottom: 32px;
+}
+
+/* Border color for all selects and inputs within filters */
+#b2bking_rulespro_filters select,
+#b2bking_rulespro_filters input,
+.b2bking_rulespro_filters select,
+.b2bking_rulespro_filters input {
+    border-color: #c8c8c8 !important;
+}
+
+.b2bking_rulespro_filters_row {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.b2bking_rulespro_search_container {
+    position: relative;
+    flex: 1;
+    min-width: 250px;
+}
+
+.b2bking_rulespro_search_icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+    pointer-events: none;
+}
+
+.b2bking_rulespro_search_input {
+    width: 100%;
+    padding: 12px 44px 12px 12px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    font-size: 14px;
+    background: white;
+    transition: all 0.2s ease;
+}
+
+.b2bking_rulespro_search_input:focus {
+    outline: none;
+    border-color: #906a1d;
+    box-shadow: 0 0 0 3px rgba(144, 106, 29, 0.1);
+}
+
+.b2bking_rulespro_filter_group {
+    min-width: 150px;
+}
+
+.b2bking_rulespro_filter_select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    font-size: 14px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.b2bking_rulespro_filter_select:focus {
+    outline: none;
+    border-color: #906a1d;
+    box-shadow: 0 0 0 3px rgba(144, 106, 29, 0.1);
+}
+
+.b2bking_rulespro_clear_filters_btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.b2bking_rulespro_clear_filters_btn:hover {
+    background: #5a6268;
+    transform: translateY(-1px);
+}
+
+/* Rules Container */
+.b2bking_rulespro_rules_container {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.b2bking_rulespro_rules_header {
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.b2bking_rulespro_rules_header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #202224;
+}
+
+.b2bking_rulespro_rules_actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.b2bking_rulespro_left_actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.b2bking_rulespro_bulk_actions_btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    height: 39px;
+    background: #fcfcfc;
+    color: #494854;
+    border: 1px solid #c8c8c8;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.b2bking_rulespro_bulk_actions_btn:hover {
+    background: #e9ecef;
+    border-color: #495057;
+    transform: translateY(-1px);
+}
+
+.b2bking_rulespro_bulk_actions_btn.active {
+    background: #e9ecef;
+    border-color: #495057;
+    color: #343a40;
+}
+
+/* Hide view toggle when bulk actions are active */
+body.b2bking_bulk_actions_active .b2bking_dynamic_rules_pro_view_toggle {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: none; /* Instant hide when bulk actions are activated */
+}
+
+/* Restore transition when toggle becomes visible again */
+.b2bking_dynamic_rules_pro_view_toggle {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Filter Toggle Button */
+.b2bking_rulespro_filter_toggle_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 39px;
+    height: 39px;
+    background: #fcfcfc;
+    color: #494854;
+    border: 1px solid #c8c8c8;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.b2bking_rulespro_filter_toggle_btn:hover {
+    background: #e9ecef;
+    border-color: #495057;
+    transform: translateY(-1px);
+}
+
+.b2bking_rulespro_filter_toggle_btn.active {
+    background: #e9ecef;
+    border-color: #495057;
+    color: #343a40;
+}
+
+/* Loading State */
+.b2bking_rulespro_loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.b2bking_rulespro_loading_spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #906a1d;
+    border-radius: 50%;
+    animation: b2bking_rulespro_spin 1s linear infinite;
+    margin-bottom: 16px;
+}
+
+@keyframes b2bking_rulespro_spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.b2bking_rulespro_loading p {
+    margin: 0;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+/* Empty State */
+.b2bking_rulespro_empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.b2bking_rulespro_empty_icon {
+    margin-bottom: 24px;
+    opacity: 0.6;
+}
+
+.b2bking_rulespro_empty h3 {
+    margin: 0 0 12px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #202224;
+}
+
+.b2bking_rulespro_empty p {
+    margin: 0 0 24px 0;
+    color: #6c757d;
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 400px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .b2bking_rulespro_filters_row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .b2bking_rulespro_search_container {
+        min-width: auto;
+    }
+    
+    .b2bking_rulespro_filter_group {
+        min-width: auto;
+    }
+    
+    .b2bking_rulespro_rules_header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+    
+    .b2bking_rulespro_rules_actions {
+        flex-direction: column;
+    }
+    
+}
+
+/* Pagination Styles */
+.b2bking_dynamic_rules_pro_pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.8rem;
+    padding: 1.5rem 2rem;
+    border-top: 1px solid #f9f9f9;
+    gap: 1rem;
+    opacity: 0.85;
+}
+
+.b2bking_dynamic_rules_pro_pagination_items_per_page {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.b2bking_dynamic_rules_pro_pagination_info {
+    color: var(--b2bking-text-secondary);
+    font-size: 0.875rem;
+    text-align: center;
+    padding: 12px 0px;
+}
+
+/* When pagination controls are hidden (single page), right-align the info text */
+.b2bking_dynamic_rules_pro_pagination.single-page .b2bking_dynamic_rules_pro_pagination_info {
+    text-align: right;
+}
+
+.b2bking_dynamic_rules_pro_items_per_page {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.b2bking_dynamic_rules_pro_items_per_page label {
+    font-size: 0.875rem;
+    color: var(--b2bking-text-secondary);
+    white-space: nowrap;
+}
+
+.b2bking_dynamic_rules_pro_items_per_page_select {
+    padding: 0.375rem 0.75rem;
+    border: 1px solid var(--b2bking-border-light);
+    border-radius: 0.375rem;
+    background: white;
+    color: var(--b2bking-text);
+    font-size: 0.875rem !important;
+    cursor: pointer;
+    transition: var(--b2bking-transition);
+    min-width: 60px;
+}
+
+.b2bking_dynamic_rules_pro_items_per_page_select:hover {
+    border-color: var(--b2bking-border);
+}
+
+.b2bking_dynamic_rules_pro_items_per_page_select:focus {
+    outline: none;
+    border-color: var(--b2bking-primary);
+    box-shadow: 0 0 0 3px rgba(25, 24, 33, 0.1);
+}
+
+
+.b2bking_dynamic_rules_pro_pagination_controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+/* Center pagination controls when they're visible (not single page) */
+.b2bking_dynamic_rules_pro_pagination:not(.single-page) .b2bking_dynamic_rules_pro_pagination_controls {
+    flex: 1;
+    justify-content: center;
+}
+
+.b2bking_dynamic_rules_pro_pagination_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid var(--b2bking-border-light);
+    background: white;
+    color: var(--b2bking-text-secondary);
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.b2bking_dynamic_rules_pro_pagination_btn:hover:not(:disabled) {
+    background: var(--b2bking-bg-light);
+    border-color: var(--b2bking-border);
+    color: var(--b2bking-text);
+}
+
+.b2bking_dynamic_rules_pro_pagination_btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.b2bking_dynamic_rules_pro_pagination_pages {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin: 0 1rem;
+}
+
+.b2bking_dynamic_rules_pro_pagination_page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    padding: 0 0.75rem;
+    border: 1px solid transparent;
+    background: white;
+    color: #343434;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.b2bking_dynamic_rules_pro_pagination_page:hover {
+    background: white;
+    border-color: #343434;
+    color: #343434;
+}
+
+.b2bking_dynamic_rules_pro_pagination_page.active {
+    background: white;
+    border-color: #343434;
+    color: #343434;
+    font-weight: 600;
+}
+
+.b2bking_dynamic_rules_pro_pagination_page.active:hover {
+    background: white;
+    border-color: #343434;
+    color: #343434;
+}
+
+.b2bking_dynamic_rules_pro_pagination_ellipsis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--b2bking-text-tertiary);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Responsive pagination */
+@media (max-width: 768px) {
+    .b2bking_dynamic_rules_pro_pagination {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .b2bking_dynamic_rules_pro_pagination_items_per_page {
+        justify-content: center;
+    }
+    
+    .b2bking_dynamic_rules_pro_pagination_controls {
+        justify-content: center;
+    }
+    
+    .b2bking_dynamic_rules_pro_pagination_pages {
+        margin: 0 0.5rem;
+    }
+    
+    .b2bking_dynamic_rules_pro_pagination_page {
+        min-width: 2rem;
+        height: 2rem;
+        padding: 0 0.5rem;
+        font-size: 0.8rem;
+    }
+    
+    .b2bking_dynamic_rules_pro_pagination_btn {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+/* Active Filter Indicators */
+.b2bking_rulespro_filter_group {
+    position: relative;
+}
+
+.b2bking_rulespro_filter_group.filter-active {
+    position: relative;
+}
+
+.b2bking_rulespro_filter_group.filter-active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--b2bking-primary) 0%, var(--b2bking-primary-light) 100%);
+    border-radius: 2px 2px 0 0;
+    z-index: 1;
+}
+
+.b2bking_rulespro_filter_group.filter-active::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 14px;
+    height: 14px;
+    background: radial-gradient(circle, white 36%, #906a1d 32%);
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.b2bking_rulespro_filter_group.filter-active .b2bking_rulespro_filter_select {
+    border-color: var(--b2bking-primary-light);
+    box-shadow: 0 0 0 1px rgba(var(--b2bking-primary-rgb), 0.1);
+}
+
+/* Search input active state */
+.b2bking_rulespro_search_container.filter-active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--b2bking-primary) 0%, var(--b2bking-primary-light) 100%);
+    border-radius: 2px 2px 0 0;
+    z-index: 1;
+}
+
+.b2bking_rulespro_search_container.filter-active::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 14px;
+    height: 14px;
+    background: radial-gradient(circle, white 32%, #906a1d 32%);
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.b2bking_rulespro_search_container.filter-active .b2bking_rulespro_search_input {
+    border-color: var(--b2bking-primary-light);
+    box-shadow: 0 0 0 1px rgba(var(--b2bking-primary-rgb), 0.1);
+}
+
+/* Clear button states */
+.b2bking_rulespro_clear_filters_btn {
+    transition: all 0.2s ease;
+    /* Default to inactive state */
+    opacity: 0.6;
+    background: #bec0c1 !important;
+    color: white !important;
+    border-color: #bec0c1 !important;
+    cursor: not-allowed;
+}
+
+.b2bking_rulespro_clear_filters_btn.clear-inactive {
+    opacity: 0.6;
+    background: #bec0c1 !important;
+    color: white !important;
+    border-color: #bec0c1 !important;
+    cursor: not-allowed;
+}
+
+.b2bking_rulespro_clear_filters_btn.clear-active {
+    opacity: 1;
+    background: #6c757d !important;
+    color: white !important;
+    border-color: #6c757d !important;
+    cursor: pointer;
+}
+
+.b2bking_rulespro_clear_filters_btn.clear-active:hover {
+    background: #5a6268 !important;
+    border-color: #545b62 !important;
+}
+
+/* Mobile filter adjustments */
+@media (max-width: 768px) {
+    .b2bking_rulespro_filter_group .b2bking_rulespro_filter_select {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .b2bking_rulespro_search_container .b2bking_rulespro_search_input {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+.b2bking_rulespro_value_item {
+    display: inline-block;
+    max-width: 162px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+}
+
+.b2bking_rulespro_value_separator {
+    margin-right: 4px;
+    color: #9ca3af;
+}
+

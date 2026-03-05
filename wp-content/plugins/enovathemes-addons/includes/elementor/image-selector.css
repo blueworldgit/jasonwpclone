@@ -1,0 +1,23 @@
+.elementor-control-image-selector-wrapper input[type="radio"] {
+	display: none;
+}
+.elementor-label-block .elementor-control-image-selector-wrapper{
+	width: 100%;
+	margin-top: 10px;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	display: grid;
+    grid-row-gap: 4px;
+    grid-column-gap: 4px;
+    justify-items: stretch;
+}
+.elementor-control-image-selector-wrapper .elementor-image-selector-label {
+	display: inline-block;
+	border: 1px solid transparent;
+	cursor: pointer;
+	border-radius: 6px;
+	overflow: hidden;
+	padding: 4px;
+}
+.elementor-control-image-selector-wrapper input:checked+.elementor-image-selector-label {
+	border: 1px solid #a4afb7;
+}

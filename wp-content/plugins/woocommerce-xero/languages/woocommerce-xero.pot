@@ -1,0 +1,613 @@
+# Copyright (C) 2026 WooCommerce
+# This file is distributed under the same license as the WooCommerce Xero Integration package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Xero Integration 1.9.10\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/target-repo\n"
+"POT-Creation-Date: 2026-02-04 14:04:46+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2026-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: node-wp-i18n 1.2.7\n"
+
+#: includes/class-wc-xr-invoice-manager.php:87
+#. translators: schedule time.
+msgid "Schedule the next Xero Invoice request for %s"
+msgstr ""
+
+#: includes/class-wc-xr-invoice-manager.php:119
+#. translators: schedule time.
+msgid "Schedule the next Xero Void Invoice request for %s"
+msgstr ""
+
+#: includes/class-wc-xr-invoice-manager.php:189
+msgid ""
+"XERO: Didn't create invoice because total is 0 and send order with zero "
+"total is set to off."
+msgstr ""
+
+#: includes/class-wc-xr-invoice-manager.php:224
+msgid "Xero Invoice updated.  "
+msgstr ""
+
+#: includes/class-wc-xr-invoice-manager.php:226
+msgid "Xero Invoice created.  "
+msgstr ""
+
+#: includes/class-wc-xr-invoice-manager.php:234
+#: includes/class-wc-xr-invoice-manager.php:317
+msgid "None"
+msgstr ""
+
+#: includes/class-wc-xr-invoice-manager.php:237
+msgid "ERROR creating Xero invoice: "
+msgstr ""
+
+#: includes/class-wc-xr-invoice-manager.php:237
+msgid " ErrorNumber: "
+msgstr ""
+
+#: includes/class-wc-xr-invoice-manager.php:237
+msgid " ErrorType: "
+msgstr ""
+
+#: includes/class-wc-xr-invoice-manager.php:237
+msgid " Message: "
+msgstr ""
+
+#: includes/class-wc-xr-invoice-manager.php:237
+msgid " Detail: "
+msgstr ""
+
+#: includes/class-wc-xr-invoice-manager.php:246
+#: includes/class-wc-xr-invoice-manager.php:327
+#: includes/class-wc-xr-payment-manager.php:200
+msgid "API Rate limit exceeded."
+msgstr ""
+
+#: includes/class-wc-xr-invoice.php:414
+#. translators: %d: order id
+msgid "Order %d"
+msgstr ""
+
+#: includes/class-wc-xr-oauth20.php:225
+msgid "Cloning instances of this class is forbidden."
+msgstr ""
+
+#: includes/class-wc-xr-oauth20.php:232
+msgid "Unserializing instances of this class is forbidden."
+msgstr ""
+
+#: includes/class-wc-xr-order-actions.php:50
+msgid "Send Invoice to Xero"
+msgstr ""
+
+#: includes/class-wc-xr-order-actions.php:51
+msgid "Send Payment to Xero"
+msgstr ""
+
+#: includes/class-wc-xr-order-actions.php:85
+msgid "Xero invoice amount is zero, no payment necessary."
+msgstr ""
+
+#: includes/class-wc-xr-payment-manager.php:73
+#. translators: schedule time.
+msgid "Schedule the next Xero Payment request for %s"
+msgstr ""
+
+#: includes/class-wc-xr-payment-manager.php:134
+msgid "Xero Payment not created: Invoice has not been sent."
+msgstr ""
+
+#: includes/class-wc-xr-payment-manager.php:139
+msgid "Xero Invoice amount is zero, no payment necessary."
+msgstr ""
+
+#: includes/class-wc-xr-payment-manager.php:174
+#. translators: Payment ID from Xero.
+msgid "Xero Payment created. Payment ID: %s"
+msgstr ""
+
+#: includes/class-wc-xr-payment-manager.php:188
+#. translators: Error number and message from Xero.
+msgid "ERROR creating Xero payment. ErrorNumber: %1$s | Error Message: %2$s"
+msgstr ""
+
+#: includes/class-wc-xr-plugin-requirement.php:32
+#. translators: 1. Woocommerce website link anchor tag
+msgid "WooCommerce Xero Integration requires %s to be installed and active."
+msgstr ""
+
+#: includes/class-wc-xr-plugin-requirement.php:66
+#. translators: 1: Xero Security Standards link anchor tag, 2:WordPress HTTPS
+#. related documentation link anchor tag
+msgid ""
+"The WooCommerce Xero integration requires a valid SSL certificate to be "
+"installed and active, as per the %1$s. To learn more about setting up SSL "
+"certificates on WordPress, please read the %2$s on WordPress.org"
+msgstr ""
+
+#: includes/class-wc-xr-plugin-requirement.php:71
+msgid "Xero Security Standards"
+msgstr ""
+
+#: includes/class-wc-xr-plugin-requirement.php:74
+msgid "HTTPS for WordPress page"
+msgstr ""
+
+#: includes/class-wc-xr-privacy.php:32 includes/class-wc-xr-settings.php:443
+#: includes/class-wc-xr-settings.php:444 includes/class-wc-xr-settings.php:484
+msgid "Xero"
+msgstr ""
+
+#: includes/class-wc-xr-privacy.php:34
+msgid "WooCommerce Xero Order Data"
+msgstr ""
+
+#: includes/class-wc-xr-privacy.php:37
+msgid "WooCommerce Xero Subscriptions Data"
+msgstr ""
+
+#: includes/class-wc-xr-privacy.php:40
+msgid "WooCommerce Xero Data"
+msgstr ""
+
+#: includes/class-wc-xr-privacy.php:73
+#. translators: %s: URL to privacy page on woocommerce.com
+msgid ""
+"By using this extension, you may be storing personal data or sharing data "
+"with an external service. <a href=\"%s\" target=\"_blank\">Learn more about "
+"how this works, including what you may want to include in your privacy "
+"policy.</a>"
+msgstr ""
+
+#: includes/class-wc-xr-privacy.php:96
+msgid "Orders"
+msgstr ""
+
+#: includes/class-wc-xr-privacy.php:100 includes/class-wc-xr-privacy.php:159
+msgid "Xero payment id"
+msgstr ""
+
+#: includes/class-wc-xr-privacy.php:104 includes/class-wc-xr-privacy.php:163
+msgid "Xero invoice id"
+msgstr ""
+
+#: includes/class-wc-xr-privacy.php:155
+msgid "Subscriptions"
+msgstr ""
+
+#: includes/class-wc-xr-privacy.php:248
+#. translators: %d: Order id
+msgid "Order ID %d contains an active Subscription"
+msgstr ""
+
+#: includes/class-wc-xr-privacy.php:263
+msgid "Xero Subscription Data Erased."
+msgstr ""
+
+#: includes/class-wc-xr-privacy.php:284
+msgid "Xero personal data erased."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:124
+msgid "Nonce verification failed!"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:183
+msgid "Select"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:192
+msgid "Client ID"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:195 includes/class-wc-xr-settings.php:201
+msgid ""
+"OAuth Credential retrieved from <a "
+"href=\"https://developer.xero.com/myapps/\" target=\"_blank\">Xero "
+"Developer My Apps Centre</a>."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:198
+msgid "Client Secret"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:205
+msgid "Authenticate"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:208
+msgid "Use this button to authenticate your Xero integration"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:212
+msgid "Invoice Prefix"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:215
+msgid "Allow you to prefix all your invoices."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:219
+msgid "Sales Account"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:222
+msgid "Code for Xero account to track sales."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:226
+msgid "Shipping Account"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:229
+msgid "Code for Xero account to track shipping charges."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:233
+msgid "Fees Account"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:237
+#. translators: Placeholders %1$s - opening HTML <a> link tag, closing HTML
+#. </a> link tag
+msgid ""
+"Code for Xero account to allow fees. This account represents the fees "
+"created by the %1$sWooCommerce Fees API%2$s."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:241
+msgid "Payment Account"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:244
+msgid "Code for Xero account to track payments received."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:248
+msgid "Rounding Account"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:251
+msgid "Code for Xero account to allow an adjustment entry for rounding."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:256
+msgid "Send Invoices"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:259
+msgid ""
+"Send Invoices manually (from the order's action menu), on creation (when "
+"the order is created), or on completion (when order status is changed to "
+"completed)."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:261 includes/class-wc-xr-settings.php:273
+msgid "Manually"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:262
+msgid "On Order Creation"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:263 includes/class-wc-xr-settings.php:274
+msgid "On Payment Completion"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:264 includes/class-wc-xr-settings.php:275
+msgid "On Order Completion"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:268
+msgid "Send Payments"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:271
+msgid ""
+"Send Payments manually or automatically when order is completed. This may "
+"need to be turned off if you sync via a separate integration such as PayPal."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:279
+msgid "Treat Shipping As"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:282
+msgid "Set this to correspond to your Xero shipping account's type."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:284 includes/class-wc-xr-settings.php:294
+msgid "Income / Revenue / Sales"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:285 includes/class-wc-xr-settings.php:295
+msgid "Expense"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:289
+msgid "Treat Fees As"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:292
+msgid "Set this to correspond to your Xero fees account's type."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:299
+msgid "Xero Branding theme"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:302
+msgid ""
+"Set a default branding theme for Xero invoices. Refresh the page to see "
+"updated list."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:306
+msgid "Match zero value tax rates"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:309
+msgid ""
+"If the integration is having trouble matching up your tax exempt line items "
+"with a tax exempt Xero tax rate, enable this and follow the <a "
+"href=\"https://docs.woocommerce.com/document/xero/#line-items-without-vat-"
+"applied-appear-as-zero-rated-ec-services-in-xero-invoices\" "
+"target=\"_blank\">instructions to force match the WooCommerce tax exempt "
+"rates to Xero tax exempt rates.</a>"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:312
+msgid "Four Decimal Places"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:315
+msgid "Use four decimal places for unit prices instead of two."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:318
+msgid "Orders with zero total"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:321
+msgid "Export orders with zero total."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:324
+msgid "Send Inventory Items"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:327
+msgid ""
+"Send Item Code field with invoices. If this is enabled then each product "
+"must have a SKU defined and be setup as an <a "
+"href=\"https://central.xero.com/s/article/Add-an-inventory-item\" "
+"target=\"_blank\">inventory item</a> in Xero."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:330
+msgid "Use customer email in contact name"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:333
+msgid ""
+"Append customer email to contact name to ensure uniqueness and prevent "
+"duplicates. Email will be appended only if a contact with the same name "
+"exists."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:336
+msgid "Debug"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:341
+#. translators: %1$s - opening HTML <a> link tag, %2$s - closing HTML </a> link
+#. tag, line break and opening HTML <strong> tag %3$s - closing HTML </strong>
+#. tag.
+msgid ""
+"Log debug messages to the %1$sWooCommerce status log%2$s Note: this may log "
+"personal information. We recommend using this for debugging purposes only "
+"and deleting the logs when finished.%3$s"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:366
+msgid "Xero Settings"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:514
+msgid "The changes you made will be lost if you navigate away from this page."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:527 includes/class-wc-xr-settings.php:528
+#: includes/class-wc-xr-settings.php:584
+msgid "Xero OAuth"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:555
+msgid "Something went wrong - token not received!"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:558
+msgid "Something went wrong - previous state is different. CSRF prevention."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:585
+msgid "Callback failed:"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:586
+msgid ""
+"An unexpected error occurred. Please try again later and review the logs "
+"for detailed error information."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:595
+msgid "Go back to Xero settings page."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:612
+msgid "Xero for WooCommerce"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:616
+msgid "Your settings have been saved."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:629
+msgid "Missing required fields"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:635
+msgid "There was an error saving your settings."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:652
+msgid ""
+"Settings for your Xero account including security keys and default account "
+"numbers."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:655
+#. translators: %1$s: opening anchor tag; %2$s: closing anchor tag
+msgid "Please ensure you're following all %1$srequirements%2$s prior to setup."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:658
+#. translators: %1$s: opening strong tag; %2$s: closing strong tag
+msgid "%1$sAll%2$s text fields are required for the integration to work properly."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:696
+msgid "Disconnect from Xero"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:704
+msgid "Sign in with Xero"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:709
+#. translators: %1$s: line break tag; %2$s: opening anchor tag; %3$s: closing
+#. anchor tag;
+msgid ""
+"Please fill in the Client ID and the Client Secret fields first and save "
+"before continuing.%1$s Also, ensure you're following all "
+"%2$srequirements%3$s prior to setup."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:745
+msgid ""
+"Please use the following url as your redirect url when creating a Xero "
+"application:"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:791
+msgid "WooCommerce Xero authorization redirect page."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:794
+msgid "Connection status:"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:798
+msgid "[OK]"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:804
+#. translators: %s: company name.
+msgid "You are connected to %s organisation."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:814 includes/class-wc-xr-settings.php:827
+msgid "[ERROR]"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:815
+msgid "Cannot request the access token, please connect your application again!"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:819 includes/class-wc-xr-settings.php:832
+msgid ""
+"For more information check the documentation page: <a "
+"href=\"https://woocommerce.com/document/xero/#setup-and-configuration\""
+">WooCommerce and Xero setup</a>"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:828
+msgid ""
+"Authentication failed: It appears the client credentials are incorrect. "
+"Please verify them and try again."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:841
+msgid "Application not authorized with Xero! Please click Sign in with Xero button."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:900
+msgid "Xero authentication using keys is deprecated and no longer works."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:901
+msgid ""
+"Please use new flow and the button available in Xero settings to authorize "
+"your application."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:903
+msgid "Go to Xero settings page"
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:920
+msgid ""
+"Unable to fetch the Branding Theme details. Please ensure your Xero "
+"connection is properly authenticated."
+msgstr ""
+
+#: includes/class-wc-xr-settings.php:940
+msgid ""
+"Xero account was disconnected because authentication keys were changed. "
+"Please connect again."
+msgstr ""
+
+#: includes/requests/class-wc-xr-request.php:320
+#. translators: %1$d - response code, %2$s - response message.
+msgid "Xero request failed due to error: %1$d (%2$s)"
+msgstr ""
+
+#: woocommerce-xero.php:153
+msgid "Settings"
+msgstr ""
+
+#: woocommerce-xero.php:154
+msgid "Support"
+msgstr ""
+
+#: woocommerce-xero.php:155
+msgid "Documentation"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WooCommerce Xero Integration"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://woocommerce.com/products/xero/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Integrates <a href=\"https://woocommerce.com/\" target=\"_blank\" "
+">WooCommerce</a> with the <a href=\"http://www.xero.com\" "
+"target=\"_blank\">Xero</a> accounting software."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "WooCommerce"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://woocommerce.com/"
+msgstr ""

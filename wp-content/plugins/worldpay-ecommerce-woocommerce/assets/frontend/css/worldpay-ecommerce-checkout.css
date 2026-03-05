@@ -1,0 +1,92 @@
+#wc-access_worldpay_checkout-cc-form #access_worldpay_checkout-card-holder-name-input {
+  text-transform: uppercase;
+  color: black;
+  font-size: 15px;
+  text-align: left;
+  font-weight: bold;
+  padding: 0.6180469716em;
+  box-shadow: inset 0 1px 1px rgb(0 0 0 / 12.5%);
+  box-sizing: border-box;
+  letter-spacing: 3px;
+}
+
+#wc-access_worldpay_checkout-cc-form #access_worldpay_checkout-card-holder-name-input::placeholder {
+  color: #757575;
+}
+
+#wc-access_worldpay_checkout-cc-form #access_worldpay_checkout-card-holder-name-input:focus {
+  color: black;
+  box-shadow: inset 0 1px 1px rgb(0 0 0 / 12.5%);
+  outline-color: transparent;
+}
+
+#access_worldpay_checkout-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 700px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 20%);
+  padding: 20px;
+}
+
+#access_worldpay_checkout-modal-content,
+#access_worldpay_checkout-challenge-iframe {
+  position: relative;
+  height: 100%;
+}
+
+#access_worldpay_checkout-modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 70%);
+  z-index: 500;
+}
+
+.woocommerce-access_worldpay_checkout-info {
+  color: #eb0c00;
+  margin: 0 !important;
+  text-align: center;
+}
+
+#wc-access_worldpay_checkout-cc-form .wc-payment-form .form-row .wc-payment-input iframe {
+  margin-top: -5px;
+  padding-top: 0;
+  height: auto;
+}
+
+#wc-access_worldpay_checkout-cc-form .wc-wp-credit-card-form-card-number,
+#wc-access_worldpay_checkout-cc-form .wc-credit-card-form-card-expiry,
+#wc-access_worldpay_checkout-cc-form .wc-credit-card-form-card-cvc {
+  height: 40px;
+}
+
+span.access_worldpay_checkout-payment-method-images {
+  float: right;
+}
+
+span.access_worldpay_checkout-payment-method-images img {
+  height: 12px !important;
+  margin: 6px 0;
+}
+
+.access_worldpay_checkout-card-brands {
+  height: 10px !important;
+  vertical-align: middle !important;
+  margin-top: 9px !important;
+  float: left !important;
+}
+
+#wc-access_worldpay_checkout-cc-form .wc-credit-card-form-card-holder-name::placeholder {
+  color: #565656;
+  opacity: 1 !important;
+  transition: none !important;
+}
