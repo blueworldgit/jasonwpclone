@@ -8,7 +8,7 @@ define('DISABLE_WP_CRON', true);
  * @package WordPress
  */
 
-// ** Database settings - Environment Switching ** //
+// ** Database and URL settings - Environment Switching ** //
 
 if (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) {
     /** LOCAL SETTINGS **/
@@ -21,10 +21,13 @@ if (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) {
     define('DB_HOST', 'localhost:3306'); 
 } else {
     /** VPS SETTINGS **/
+    define( 'WP_HOME', 'https://maxusvanparts.acstestweb.co.uk' );
+    define( 'WP_SITEURL', 'https://maxusvanparts.acstestweb.co.uk' );
+
     define( 'DB_NAME', 'wp_cw2rp' );
     define( 'DB_USER', 'wp_khnpj' );
     define( 'DB_PASSWORD', 'eq0R@M^5?1#q@THS' );
-    define( 'DB_HOST', 'localhost' ); // Removed port for VPS compatibility
+    define( 'DB_HOST', 'localhost' ); 
 }
 
 /** Database charset to use in creating database tables. */
