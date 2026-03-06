@@ -9,6 +9,19 @@ define('DISABLE_WP_CRON', true);
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
+
+if (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) {
+   
+  define( 'WP_HOME', 'http://localhost/jasonwpclone' );
+define( 'WP_SITEURL', 'http://localhost/jasonwpclone' );
+
+
+    define('DB_NAME', 'maxussql');
+    define('DB_USER', 'root');
+    define('DB_PASSWORD', '');
+} else {
+	
+	
 define( 'DB_NAME', 'wp_cw2rp' );
 
 /** Database username */
@@ -16,6 +29,10 @@ define( 'DB_USER', 'wp_khnpj' );
 
 /** Database password */
 define( 'DB_PASSWORD', 'eq0R@M^5?1#q@THS' );
+
+}
+
+
 
 /** Database hostname */
 define( 'DB_HOST', 'localhost:3306' );
