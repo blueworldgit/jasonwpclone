@@ -215,6 +215,118 @@ function maxus_get_vehicle_by_slug($slug) {
 }
 
 /**
+ * Get valid category IDs for a VIN (prevents category bleed from variable products)
+ * 
+ * Returns an array of term_ids for categories that belong to this VIN's tree:
+ * - The serial category (VIN itself)
+ * - All main categories under it
+ * - All subcategories under those main categories
+ * 
+ * @param string $vin The VIN to get categories for
+ * @return array Array of term_ids
+ */
+function maxus_get_valid_category_ids_for_vin($vin) {
+    global $wpdb;
+    
+    // Use transient cache (valid for 1 hour)
+    $cache_key = 'maxus_valid_cats_' . md5($vin);
+    $cached = get_transient($cache_key);
+    if ($cached !== false) {
+        return $cached;
+    }
+    
+    $valid_ids = [];
+    
+    // Find the serial category (the VIN term)
+    $serial_term = get_term_by('name', $vin, 'product_cat');
+    if (!$serial_term) {
+        return [];
+    }
+    
+    $valid_ids[] = $serial_term->term_id;
+    
+    // Get all main categories (direct children of serial category)
+    $main_cats = get_terms([
+        'taxonomy' => 'product_cat',
+        'parent' => $serial_term->term_id,
+        'hide_empty' => false,
+    ]);
+    
+    foreach ($main_cats as $main_cat) {
+        $valid_ids[] = $main_cat->term_id;
+        
+        // Get subcategories (children of main category)
+        $sub_cats = get_terms([
+            'taxonomy' => 'product_cat',
+            'parent' => $main_cat->term_id,
+            'hide_empty' => false,
+        ]);
+        
+        foreach ($sub_cats as $sub_cat) {
+            $valid_ids[] = $sub_cat->term_id;
+        }
+    }
+    
+    // Cache for 1 hour
+    set_transient($cache_key, $valid_ids, HOUR_IN_SECONDS);
+    
+    return $valid_ids;
+}
+
+/**
+ * Filter product categories to only those valid for a VIN
+ * 
+ * Used to prevent category bleed when displaying variable products whose
+ * variations span multiple VINs. Only shows categories that belong to the
+ * current VIN's category tree.
+ * 
+ * @param WC_Product|int $product Product object or ID
+ * @param string $vin VIN to filter categories for
+ * @return array Filtered array of WP_Term objects
+ */
+function maxus_get_filtered_product_categories($product, $vin) {
+    if (is_numeric($product)) {
+        $product = wc_get_product($product);
+    }
+    
+    if (!$product) {
+        return [];
+    }
+    
+    // Get all product categories
+    $all_category_ids = $product->get_category_ids();
+    
+    if (empty($all_category_ids)) {
+        return [];
+    }
+    
+    // Get valid category IDs for this VIN
+    $valid_ids = maxus_get_valid_category_ids_for_vin($vin);
+    
+    if (empty($valid_ids)) {
+        return [];
+    }
+    
+    // Filter to only valid categories
+    $filtered_ids = array_intersect($all_category_ids, $valid_ids);
+    
+    if (empty($filtered_ids)) {
+        return [];
+    }
+    
+    // Convert to term objects
+    $terms = [];
+    foreach ($filtered_ids as $term_id) {
+        $term = get_term($term_id, 'product_cat');
+        if ($term && !is_wp_error($term)) {
+            $terms[] = $term;
+        }
+    }
+    
+    return $terms;
+}
+
+/**
  * Force vehicles taxonomy to show all terms regardless of post count.
  * Products are linked to vehicles via wp_sku_vin_mapping, not the taxonomy directly,
  * so hide_empty would incorrectly filter out most vehicles.

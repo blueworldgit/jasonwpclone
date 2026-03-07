@@ -1,0 +1,58 @@
+Category Structure Analysis
+Maxus brand category not found!
+
+All top-level categories (parent=0):
+ID: 6298, Name: Air Intake System, Slug: air-intake-system
+ID: 6299, Name: Airbag, Slug: airbag
+ID: 6300, Name: Alternative Hvac, Slug: alternative-hvac
+ID: 6301, Name: Antenna, Slug: antenna
+ID: 6302, Name: Body Interior & Exterior Electronics, Slug: body-interior-exterior-electronics
+ID: 6303, Name: Body Lower Exterior Trim, Slug: body-lower-exterior-trim
+ID: 6304, Name: Body Lower Structure, Slug: body-lower-structure
+ID: 6305, Name: Body Upper Exterior Trim, Slug: body-upper-exterior-trim
+ID: 6306, Name: Body Upper Structure, Slug: body-upper-structure
+ID: 6307, Name: Body Window, Slug: body-window
+ID: 6308, Name: Brakes, Slug: brakes
+ID: 6309, Name: Bumpers,Fascia & Grille, Slug: bumpersfascia-grille
+ID: 6310, Name: Charging & Energystorage, Slug: charging-energystorage
+ID: 6311, Name: Chassis Structure, Slug: chassis-structure
+ID: 6312, Name: Communicate, Slug: communicate
+ID: 6313, Name: Customer Switches, Slug: customer-switches
+ID: 6314, Name: Driver Information, Slug: driver-information
+ID: 6315, Name: Emission Exhaust System, Slug: emission-exhaust-system
+ID: 6316, Name: Entertainment, Slug: entertainment
+ID: 6317, Name: Front Closures Front End Sheetmetal, Slug: front-closures-front-end-sheetmetal
+ID: 6318, Name: Front Lamp, Slug: front-lamp
+ID: 6319, Name: Frontexterior Hvac Airflow, Slug: frontexterior-hvac-airflow
+ID: 6320, Name: Frontinterior Hvac Airflow, Slug: frontinterior-hvac-airflow
+ID: 6321, Name: Fuel Storage & Handling, Slug: fuel-storage-handling
+ID: 6322, Name: Hvac & Powertrain Coolingin, Slug: hvac-powertrain-coolingin
+ID: 6323, Name: Instrument Panel & Console, Slug: instrument-panel-console
+ID: 6324, Name: Interior Acoustic Syetem, Slug: interior-acoustic-syetem
+ID: 6325, Name: Interior Lamp, Slug: interior-lamp
+ID: 6326, Name: Interior Trim, Slug: interior-trim
+ID: 6327, Name: Mounts, Slug: mounts
+ID: 6328, Name: On Vehicle Attachments & Tools, Slug: on-vehicle-attachments-tools
+ID: 6329, Name: Pickup Box, Slug: pickup-box
+ID: 29779, Name: Pipe, Slug: pipe
+ID: 6330, Name: Power & Signaldistribution, Slug: power-signaldistribution
+ID: 6331, Name: Power Energy Storage & Link Wire, Slug: power-energy-storage-link-wire
+ID: 6332, Name: Power Generation, Slug: power-generation
+ID: 6333, Name: Power Transmission, Slug: power-transmission
+ID: 6334, Name: Powertrain Control & Diagnostic, Slug: powertrain-control-diagnostic
+ID: 6335, Name: Powertrain Driver Interface, Slug: powertrain-driver-interface
+ID: 6336, Name: Rear Closure, Slug: rear-closure
+ID: 6337, Name: Rear Lamp, Slug: rear-lamp
+ID: 6338, Name: Rear View Mirror, Slug: rear-view-mirror
+ID: 6339, Name: Rearinterior Hvac Airflow, Slug: rearinterior-hvac-airflow
+ID: 6340, Name: Safety & Avoidance, Slug: safety-avoidance
+ID: 6341, Name: Safety Belt, Slug: safety-belt
+ID: 6342, Name: Sealant & Body Attachment, Slug: sealant-body-attachment
+ID: 6343, Name: Seats, Slug: seats
+ID: 6344, Name: Side Closures, Slug: side-closures
+ID: 6345, Name: Steering, Slug: steering
+ID: 6346, Name: Suspension, Slug: suspension
+ID: 6347, Name: Tire,Wheels,Wheel Trim, Slug: tirewheelswheel-trim
+ID: 6348, Name: Wiper & Washer, Slug: wiper-washer
+SKU-VIN Mapping Check
+SKUs mapped to VIN 'LSFAM120XNA160733': 863

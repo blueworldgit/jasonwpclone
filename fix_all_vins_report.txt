@@ -1,0 +1,161 @@
+STEP 1: Fetching all source categories...
+  Total source categories: 3512
+
+STEP 2: Fetching valid SKUs for each VIN from source...
+
+  VIN: LSFAM120XNA160733  (source cat id: 4408)
+    Source tree: 42 main, 97 sub categories
+    Valid SKUs: 2325
+
+  VIN: LSFAM11C6RA133899  (source cat id: 5317)
+    Source tree: 48 main, 145 sub categories
+    Valid SKUs: 3523
+
+  VIN: LSFAM11C6RA144501  (source cat id: 5874)
+    Source tree: 48 main, 146 sub categories
+    Valid SKUs: 3538
+
+  VIN: LSFAL11A4PA157987  (source cat id: 3591)
+    Source tree: 47 main, 172 sub categories
+    Valid SKUs: 5164
+
+  VIN: LSFAL11A5MA087816  (source cat id: 4021)
+    Source tree: 46 main, 145 sub categories
+    Valid SKUs: 3399
+
+  VIN: LSH14J7C2MA122115  (source cat id: 4921)
+    Source tree: 47 main, 155 sub categories
+    Valid SKUs: 3938
+
+  VIN: LSH14J7CXMA114599  (source cat id: 6455)
+    Source tree: 47 main, 166 sub categories
+    Valid SKUs: 3829
+
+  VIN: LSH14J7C7MA114771  (source cat id: 3789)
+    Source tree: 46 main, 161 sub categories
+    Valid SKUs: 3906
+
+  VIN: LSH14J7C4RV123458  (source cat id: 6069)
+    Source tree: 48 main, 144 sub categories
+    Valid SKUs: 3482
+
+  VIN: LSH14J7C3RV123225  (source cat id: 5124)
+    Source tree: 48 main, 144 sub categories
+    Valid SKUs: 3435
+
+  VIN: LSH14J7C9RV123360  (source cat id: 6262)
+    Source tree: 48 main, 144 sub categories
+    Valid SKUs: 3435
+
+  VIN: LSH14J4CXMA165329  (source cat id: 4741)
+    Source tree: 46 main, 133 sub categories
+    Valid SKUs: 2652
+
+  VIN: LSH14J4C0RV121632  (source cat id: 5511)
+    Source tree: 46 main, 108 sub categories
+    Valid SKUs: 2507
+
+  VIN: LSH14J7C0SA082498  (source cat id: 5666)
+    Source tree: 47 main, 160 sub categories
+    Valid SKUs: 3554
+
+  VIN: LSH14C4C5NA129710  (source cat id: 4548)
+    Source tree: 46 main, 146 sub categories
+    Valid SKUs: 3665
+
+  VIN: LSH14JTC6FA621119  (source cat id: 6669)
+    Source tree: 46 main, 146 sub categories
+    Valid SKUs: 3527
+
+  VIN: LSKG5GL16KA060062  (source cat id: 6862)
+    Source tree: 47 main, 191 sub categories
+    Valid SKUs: 4071
+
+  Source data fetch complete in 171.3s
+
+======================================================================
+STEP 3: Cleaning sku_vin_mapping...
+======================================================================
+
+  LSFAM120XNA160733: 863 local, 863 valid, 0 to remove
+
+  LSFAM11C6RA133899: 1314 local, 1314 valid, 0 to remove
+
+  LSFAM11C6RA144501: 1318 local, 1318 valid, 0 to remove
+
+  LSFAL11A4PA157987: 1228 local, 1228 valid, 0 to remove
+
+  LSFAL11A5MA087816: 1251 local, 1251 valid, 0 to remove
+
+  LSH14J7C2MA122115: 1436 local, 1436 valid, 0 to remove
+
+  LSH14J7CXMA114599: 1394 local, 1394 valid, 0 to remove
+
+  LSH14J7C7MA114771: 1336 local, 1336 valid, 0 to remove
+
+  LSH14J7C4RV123458: 1309 local, 1309 valid, 0 to remove
+
+  LSH14J7C3RV123225: 1304 local, 1304 valid, 0 to remove
+
+  LSH14J7C9RV123360: 1304 local, 1304 valid, 0 to remove
+
+  LSH14J4CXMA165329: 877 local, 877 valid, 0 to remove
+
+  LSH14J4C0RV121632: 916 local, 916 valid, 0 to remove
+
+  LSH14J7C0SA082498: 1261 local, 1261 valid, 0 to remove
+
+  LSH14C4C5NA129710: 1464 local, 1464 valid, 0 to remove
+
+  LSH14JTC6FA621119: 1272 local, 1272 valid, 0 to remove
+
+  LSKG5GL16KA060062: 1420 local, 1420 valid, 0 to remove
+
+  Total sku_vin_mapping rows to remove: 0
+
+======================================================================
+STEP 4: Mapping source categories to local terms + creating missing...
+======================================================================
+
+  Source categories mapped to local: 3296
+  Source categories missing locally: 0
+  Unique categories to create (after deduplication): 0
+  Categories created: 0
+
+======================================================================
+STEP 5: Building correct product_cat assignments...
+======================================================================
+  SKUs with category assignments: 34334
+  SKUs matched to local products: 30685
+  Products to update: 7090
+  Products after parent propagation: 11719
+  Products to write (parents only): 5943
+
+======================================================================
+STEP 6: Rebuilding product_cat term_relationships...
+======================================================================
+  Posts to rewrite: 5943
+  Deleted 14269 category relationships from all variations
+  Deleted 15206 old product_cat relationships
+  Inserted 15206 new product_cat relationships
+
+======================================================================
+STEP 7: Recalculating term counts...
+======================================================================
+  Updated 507 term counts
+
+======================================================================
+SUMMARY
+======================================================================
+  Mode           : APPLIED
+  Total time     : 177.8s
+  VINs processed : 17/17
+
+  sku_vin_mapping changes:
+    Total removed: 0
+
+  Categories created : 0
+  Products updated   : 5943
+
+  IMPORTANT: Run WooCommerce -> Status -> Tools -> 'Regenerate product lookup table'
+  on the WordPress admin after this fix.
