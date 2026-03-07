@@ -1,0 +1,154 @@
+  CATEGORY MAPPING ANALYSIS: Database vs Hardcoded PHP
+════════════════════════════════════════════════════════════════════════════════
+
+This script proves whether maxus_get_vehicle_categories() in functions.php      
+is necessary, or if the DB already contains all the data dynamically.
+
+❌ Database connection failed: Unsupported argument 'cursorclass'
+PS C:\pythonstuff\wpimportcollection> .\.venv\Scripts\python.exe analyse_category_mapping.py
+C:\pythonstuff\wpimportcollection\analyse_category_mapping.py:1: SyntaxWarning: 
+invalid escape sequence '\.'
+  """
+
+════════════════════════════════════════════════════════════════════════════════  CATEGORY MAPPING ANALYSIS: Database vs Hardcoded PHP
+════════════════════════════════════════════════════════════════════════════════
+This script proves whether maxus_get_vehicle_categories() in functions.php      
+is necessary, or if the DB already contains all the data dynamically.
+
+────────────────────────────────────────────────────────────────────────────────STEP 1: Verify wp_sku_vin_mapping exists and has data
+────────────────────────────────────────────────────────────────────────────────  ✓ wp_sku_vin_mapping: 25,646 rows | 8,355 unique SKUs | 18 unique VINs
+  ✓ wp_postmeta (_sku): 27,110 rows with SKUs
+
+────────────────────────────────────────────────────────────────────────────────STEP 2: For each vehicle VIN — query real DB categories vs hardcoded map        
+────────────────────────────────────────────────────────────────────────────────
+  [maxus-a80-chassis]
+    VIN: LSH14JTC6FA621119
+    Products in DB: 1,397 | Unique SKUs in mapping: 1,397
+    DB categories: 48 parent cats → 351 subcategories
+    ⚠️  Parents IN DB but MISSING from hardcoded map: ['charging-energystorage',
+ 'communicate', 'interior-acoustic-syetem', 'power-energy-storage-link-wire', 'safety-avoidance', 'sealant-body-attachment']
+    ⚠️  Subcats in DB for 'interior-trim' missing from hardcoded: ['floor-trim1'
+]
+    ⚠️  Subcats in DB for 'steering' missing from hardcoded: ['redirector1', 'st
+eering-column1']
+    ⚠️  Subcats in DB for 'powertrain-driver-interface' missing from hardcoded: 
+['accelerator-pedal1', 'transmission-operating-mechanism-6mt-e5', 'transmission-shift-actuation-6amt-9at', 'transmission-shift-actuation-at、electric-vehicle'] 
+    ⚠️  Subcats in DB for 'customer-switches' missing from hardcoded: ['passive-
+entry-passive-start1', 'passive-entry-passive-start2']
+    ⚠️  Subcats in DB for 'instrument-panel-console' missing from hardcoded: ['i
+nstrument-panel-crossmember-lhd', 'instrument-panel-crossmember-lhd1', 'instrument-panel-crossmember-rhd', 'instrument-panel-crossmember-rhd1', 'instrument-panel-crossmember-rhd2', 'instrument-panel1']
+    ⚠️  Subcats in DB for 'wiper-washer' missing from hardcoded: ['front-washer'
+, 'washer-system', 'washer-system1', 'wiper-lhd', 'wiper-rhd', 'wiper1']        
+    ⚠️  Subcats in DB for 'mounts' missing from hardcoded: ['ept-mounts', 'power
+-assembly-installation1']
+    ⚠️  Subcats in DB for 'power-generation' missing from hardcoded: ['accessory
+-accessory-drive', 'accessory-accessory-drive1', 'coolant-pump-and-inl-otlt-tube-thermostat', 'egr-asm-d20', 'engine-accessory-d20', 'engine-shield1', 'engine-shield2', 'engine-shield3', 'exhaust-elbow-turbocharger', 'exhaust-elbow-turbocharger-d20', 'lp-egr-intake-pipe-accessory', 'oil-cooler-and-inl-otlt-tube-filter-d20', 'oil-pumps-vacuum-pumps-vacuum-tube-components-d20', 'sensor-harness-d20', 'sump-oil-suction-pipe-dipstick', 'sump-oil-suction-pipe-dipstick-d20']        
+    ⚠️  Subcats in DB for 'power-transmission' missing from hardcoded: ['rear-dr
+ive-axle1', 'transfer-case-part-time-4wd', 'transmission-main-shaft-and-gear-6mt-back-drive', 'transmission-shaft-output-1256-6mt-front-drive', 'transmission-shaft-output-1256-6mt-front-drive-6amt', 'transmission-shaft-output-1256-sagw-6mt-6amt']
+    ⚠️  Subcats in DB for 'suspension' missing from hardcoded: ['front-suspensio
+n1', 'rear-shock-absorber1', 'rear-shock-absorber2', 'rear-suspension1']        
+    ⚠️  Subcats in DB for 'driver-information' missing from hardcoded: ['schoolb
+us-electronics']
+    ⚠️  Subcats in DB for 'hvac-powertrain-coolingin' missing from hardcoded: ['
+coolant-plumbing-hardware-ev', 'coolant-plumbing-hardware-fcv', 'coolant-plumbing-hardware-phev', 'refrigerant-plumbing-hardware-fcv']
+    ⚠️  Subcats in DB for 'brakes' missing from hardcoded: ['brake-apply-plumbin
+g1', 'park-brake1', 'rear-disc-brake-corner']
+    ⚠️  Subcats in DB for 'on-vehicle-attachments-tools' missing from hardcoded:
+ ['fluids-and-lubrications1', 'lubricant1', 'lubricant2']
+    ⚠️  Subcats in DB for 'power-signaldistribution' missing from hardcoded: ['c
+hassis-harnesses', 'fusebox-cabin-compartment1', 'high-voltage-harness-ev-phev', 'high-voltage-harness-fcv', 'instrument-panel-wire-harnesses']
+    ⚠️  Subcats in DB for 'entertainment' missing from hardcoded: ['infotainment
+-system']
+    ⚠️  Subcats in DB for 'seats' missing from hardcoded: ['2014-schoolbus-seat'
+, '2015-school-seat', '62-right-rudder', 'cf1-cf2-seat', 'frt-sin-seat1', 'frt-sin-seat2', 'frt-sin-seat3', 'ix-seat', 'old-luxury-h-seat', 'rr-3-seat-w-recl', 
+'rr-dbl-seat-w-o-recl', 'rr-dbl-seat-w-recl', 'rr-dbl-seat-w-recl1', 'rr-sin-seat-w-recl', 'rr-sin-seat-w-recl1', 'rr-sin-wide-seat', 'single-seat-type']       
+    ⚠️  Subcats in DB for 'body-lower-exterior-trim' missing from hardcoded: ['a
+ssist-step']
+    ⚠️  Subcats in DB for 'side-closures' missing from hardcoded: ['elec-swingin
+g-dr', 'side-sliding-door-handle-and-door-lock1', 'tnk-fil-dr']
+    ⚠️  Subcats in DB for 'fuel-storage-handling' missing from hardcoded: ['urea
+-system']
+
+  [maxus-deliver-7]
+    VIN: LSH14J7C3RV123225
+    Products in DB: 1,482 | Unique SKUs in mapping: 1,482
+    DB categories: 50 parent cats → 418 subcategories
+    ℹ️  No hardcoded map entry to compare (comparison only covers vehicles added
+ to HARDCODED_MAP in this script)
+
+  [maxus-deliver-7-high-roof-diesel]
+    VIN: LSH14J7C4RV123458
+    Products in DB: 1,505 | Unique SKUs in mapping: 1,505
+    DB categories: 50 parent cats → 418 subcategories
+    ℹ️  No hardcoded map entry to compare (comparison only covers vehicles added
+ to HARDCODED_MAP in this script)
+
+  [maxus-deliver-7-low-roof-diesel]
+    VIN: LSH14J7C9RV123360
+    Products in DB: 1,482 | Unique SKUs in mapping: 1,482
+    DB categories: 50 parent cats → 418 subcategories
+    ℹ️  No hardcoded map entry to compare (comparison only covers vehicles added
+ to HARDCODED_MAP in this script)
+
+  [maxus-deliver-9-fwd-lux]
+    VIN: LSH14J7CXMA114599
+    Products in DB: 1,573 | Unique SKUs in mapping: 1,573
+    DB categories: 50 parent cats → 389 subcategories
+    ℹ️  No hardcoded map entry to compare (comparison only covers vehicles added
+ to HARDCODED_MAP in this script)
+
+  [maxus-deliver-9-fwd-std]
+    VIN: LSH14J7C7MA114771
+    Products in DB: 1,528 | Unique SKUs in mapping: 1,528
+    DB categories: 50 parent cats → 387 subcategories
+    ℹ️  No hardcoded map entry to compare (comparison only covers vehicles added
+ to HARDCODED_MAP in this script)
+
+  [maxus-deliver-9-rwd-chassis]
+    VIN: LSFAL11A5MA087816
+    Products in DB: 1,380 | Unique SKUs in mapping: 1,380
+    DB categories: 50 parent cats → 363 subcategories
+    ℹ️  No hardcoded map entry to compare (comparison only covers vehicles added
+ to HARDCODED_MAP in this script)
+
+  [maxus-deliver-9-rwd-lux]
+    VIN: LSFAL11A4PA157987
+    Products in DB: 1,363 | Unique SKUs in mapping: 1,363
+    DB categories: 50 parent cats → 366 subcategories
+    ℹ️  No hardcoded map entry to compare (comparison only covers vehicles added
+ to HARDCODED_MAP in this script)
+
+  [maxus-deliver-9-rwd-std]
+    VIN: LSH14J7C2MA122115
+    Products in DB: 1,621 | Unique SKUs in mapping: 1,621
+    DB categories: 50 parent cats → 366 subcategories
+    ℹ️  No hardcoded map entry to compare (comparison only covers vehicles added
+ to HARDCODED_MAP in this script)
+
+  [maxus-e-deliver-3]
+    VIN: LSH14C4C5NA129710
+    Products in DB: 1,516 | Unique SKUs in mapping: 1,516
+    DB categories: 50 parent cats → 363 subcategories
+    ℹ️  No hardcoded map entry to compare (comparison only covers vehicles added
+ to HARDCODED_MAP in this script)
+
+  [maxus-e-deliver-7]
+    VIN: LSH14J4C0RV121632
+    Products in DB: 1,096 | Unique SKUs in mapping: 1,096
+    DB categories: 50 parent cats → 358 subcategories
+    ℹ️  No hardcoded map entry to compare (comparison only covers vehicles added
+ to HARDCODED_MAP in this script)
+
+  [maxus-e-deliver-9]
+    VIN: LSH14J4CXMA165329
+    Products in DB: 1,060 | Unique SKUs in mapping: 1,060
+    DB categories: 50 parent cats → 301 subcategories
+    ℹ️  No hardcoded map entry to compare (comparison only covers vehicles added
+ to HARDCODED_MAP in this script)
+
+  [maxus-t60]
+    VIN: LSFAM11C6RA133899
+    Products in DB: 1,488 | Unique SKUs in mapping: 1,488
+    DB categories: 51 parent cats → 350 subcategories
+    ℹ️  No hardcoded map entry to compare (comparison only covers vehicles added
+ to HARDCODED_MAP in this script)
