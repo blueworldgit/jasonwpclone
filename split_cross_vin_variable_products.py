@@ -31,15 +31,23 @@ PREFIX = "wp_"
 
 # Dry-run mode (set to False to apply changes)
 DRY_RUN = '--fix' not in sys.argv
+USE_REMOTE = '--remote' in sys.argv
 
 print("=" * 70)
 print("Split Cross-VIN Variable Products")
 print("=" * 70)
 print(f"Mode: {'DRY-RUN (no changes)' if DRY_RUN else '*** LIVE FIX ***'}")
+print(f"Target: {'REMOTE (themed site)' if USE_REMOTE else 'LOCAL (WAMP)'}")
 print()
 
 # Connect to database
-conn = mysql.connector.connect(**DB_CFG)
+if USE_REMOTE:
+    print("Connecting to remote SQL endpoint...")
+    from sql_exec import RemoteSQL
+    conn = RemoteSQL()
+else:
+    print("Connecting to local database...")
+    conn = mysql.connector.connect(**DB_CFG)
 cur = conn.cursor(dictionary=True)
 
 # VIN to vehicle name mapping (for readable product names)
@@ -123,6 +131,21 @@ for prod in cross_vin_products:
     
     print(f"\nProcessing: {parent_title} (ID {parent_id})")
     
+    # RESUME CHECK: Skip if VIN-specific versions already exist
+    cur.execute(f"""
+        SELECT COUNT(*) as count 
+        FROM {PREFIX}posts 
+        WHERE post_type = 'product' 
+          AND post_title LIKE %s 
+          AND post_status = 'publish'
+    """, (f"{parent_title} - %",))
+    
+    already_split = int(cur.fetchone()['count'])
+    if already_split > 0:
+        print(f"  ✓ Already processed - {already_split} VIN-specific products exist. Skipping.")
+        stats['products_processed'] += 1
+        continue
+    
     # Get all variations with their VINs
     cur.execute(f"""
         SELECT 
@@ -140,6 +163,12 @@ for prod in cross_vin_products:
     """, (parent_id,))
     
     variations = cur.fetchall()
+    
+    # Additional check: Skip if no variations found (all moved already)
+    if not variations:
+        print(f"  ✓ No variations found - already processed. Skipping.")
+        stats['products_processed'] += 1
+        continue
     
     # Group variations by VIN
     vin_groups = defaultdict(list)

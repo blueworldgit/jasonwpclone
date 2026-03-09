@@ -19,14 +19,17 @@ def normalize(s):
 conn = mysql.connector.connect(**DB_CFG)
 cur = conn.cursor(dictionary=True)
 
-# Get all products linked to this VIN
+# Get all products linked to this VIN (with variant attribute join)
 cur.execute(f"""
     SELECT DISTINCT p.ID
     FROM {PREFIX}posts p
     INNER JOIN {PREFIX}postmeta pm ON p.ID = pm.post_id
         AND pm.meta_key = '_sku' AND pm.meta_value != ''
+    LEFT JOIN {PREFIX}postmeta pm_var ON p.ID = pm_var.post_id 
+        AND pm_var.meta_key = 'attribute_pa_variant'
     INNER JOIN {PREFIX}sku_vin_mapping svm
         ON pm.meta_value = svm.sku AND svm.vin = %s
+        AND (svm.variant_attribute IS NULL OR svm.variant_attribute = '' OR svm.variant_attribute = pm_var.meta_value)
     WHERE p.post_type IN ('product','product_variation')
       AND p.post_status = 'publish'
 """, (VIN,))
@@ -144,8 +147,11 @@ if fuel_norm in local_main_norm:
         FROM {PREFIX}posts p
         INNER JOIN {PREFIX}postmeta pm ON p.ID = pm.post_id
             AND pm.meta_key = '_sku' AND pm.meta_value != ''
+        LEFT JOIN {PREFIX}postmeta pm_var ON p.ID = pm_var.post_id 
+            AND pm_var.meta_key = 'attribute_pa_variant'
         INNER JOIN {PREFIX}sku_vin_mapping svm
             ON pm.meta_value = svm.sku AND svm.vin = %s
+            AND (svm.variant_attribute IS NULL OR svm.variant_attribute = '' OR svm.variant_attribute = pm_var.meta_value)
         INNER JOIN {PREFIX}term_relationships tr ON p.ID = tr.object_id
         INNER JOIN {PREFIX}term_taxonomy tt ON tr.term_taxonomy_id = tt.term_taxonomy_id
             AND tt.taxonomy = 'product_cat'
@@ -164,8 +170,11 @@ if fuel_norm in local_main_norm:
         FROM {PREFIX}posts p
         INNER JOIN {PREFIX}postmeta pm ON p.ID = pm.post_id
             AND pm.meta_key = '_sku' AND pm.meta_value != ''
+        LEFT JOIN {PREFIX}postmeta pm_var ON p.ID = pm_var.post_id 
+            AND pm_var.meta_key = 'attribute_pa_variant'
         INNER JOIN {PREFIX}sku_vin_mapping svm
             ON pm.meta_value = svm.sku AND svm.vin = %s
+            AND (svm.variant_attribute IS NULL OR svm.variant_attribute = '' OR svm.variant_attribute = pm_var.meta_value)
         INNER JOIN {PREFIX}term_relationships tr ON p.ID = tr.object_id
         INNER JOIN {PREFIX}term_taxonomy tt ON tr.term_taxonomy_id = tt.term_taxonomy_id
             AND tt.taxonomy = 'product_cat'

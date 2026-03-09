@@ -49,6 +49,7 @@ CONC     = 10
 PREFIX   = "wp_"
 DB_CFG   = dict(host="localhost", user="root", password="", database="maxussql")
 DRY_RUN  = "--fix" not in sys.argv
+USE_REMOTE = "--remote" in sys.argv
 
 # All 17 VINs from the themed site's sku_vin_mapping
 ALL_VINS = [
@@ -331,7 +332,13 @@ async def main():
     log("STEP 3: Cleaning sku_vin_mapping...", report)
     log(f"{'='*70}", report)
 
-    conn = mysql.connector.connect(**DB_CFG)
+    if USE_REMOTE:
+        log("  Connecting to remote SQL endpoint...", report)
+        from sql_exec import RemoteSQL
+        conn = RemoteSQL()
+    else:
+        log("  Connecting to local database...", report)
+        conn = mysql.connector.connect(**DB_CFG)
     cur = conn.cursor(dictionary=True)
 
     total_removed = 0

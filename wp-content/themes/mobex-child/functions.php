@@ -846,8 +846,11 @@ function maxus_get_vehicle_categories($vehicle_slug) {
          FROM {$wpdb->posts} p
          INNER JOIN {$wpdb->postmeta} pm
              ON p.ID = pm.post_id AND pm.meta_key = '_sku' AND pm.meta_value != ''
+         LEFT JOIN {$wpdb->postmeta} pm_var 
+             ON p.ID = pm_var.post_id AND pm_var.meta_key = 'attribute_pa_variant'
          INNER JOIN {$wpdb->prefix}sku_vin_mapping svm
              ON pm.meta_value = svm.sku AND svm.vin = %s
+             AND (svm.variant_attribute IS NULL OR svm.variant_attribute = '' OR svm.variant_attribute = pm_var.meta_value)
          INNER JOIN {$wpdb->term_relationships} tr ON p.ID = tr.object_id
          INNER JOIN {$wpdb->term_taxonomy} tt
              ON tr.term_taxonomy_id = tt.term_taxonomy_id AND tt.taxonomy = 'product_cat'

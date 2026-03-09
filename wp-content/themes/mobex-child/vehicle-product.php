@@ -144,19 +144,49 @@ if (!$image_id && $variation_id) {
 }
 $image_url = $image_id ? wp_get_attachment_image_url($image_id, 'large') : wc_placeholder_img_src('large');
 
-// Check vehicle compatibility
-$is_compatible = $wpdb->get_var($wpdb->prepare(
-    "SELECT COUNT(*) FROM {$wpdb->prefix}sku_vin_mapping WHERE sku = %s AND vin = %s",
-    $sku, $vin
-));
+// Get the variant attribute for compatibility check
+$variant_attribute = null;
+if ($variation_id) {
+    $variant_attribute = get_post_meta($variation_id, 'attribute_pa_variant', true);
+} else {
+    $variant_attribute = get_post_meta($product_post->ID, 'attribute_pa_variant', true);
+}
 
-// Get all compatible vehicles for this SKU
-$compatible_vehicles = $wpdb->get_results($wpdb->prepare("
-    SELECT DISTINCT vehicle_name, vehicle_year
-    FROM {$wpdb->prefix}sku_vin_mapping
-    WHERE sku = %s
-    ORDER BY vehicle_name, vehicle_year
-", $sku));
+// Check vehicle compatibility (with variant matching)
+if ($variant_attribute) {
+    $is_compatible = $wpdb->get_var($wpdb->prepare(
+        "SELECT COUNT(*) FROM {$wpdb->prefix}sku_vin_mapping 
+         WHERE sku = %s AND vin = %s 
+         AND (variant_attribute IS NULL OR variant_attribute = '' OR variant_attribute = %s)",
+        $sku, $vin, $variant_attribute
+    ));
+} else {
+    $is_compatible = $wpdb->get_var($wpdb->prepare(
+        "SELECT COUNT(*) FROM {$wpdb->prefix}sku_vin_mapping 
+         WHERE sku = %s AND vin = %s 
+         AND (variant_attribute IS NULL OR variant_attribute = '')",
+        $sku, $vin
+    ));
+}
+
+// Get all compatible vehicles for this SKU (with variant matching)
+if ($variant_attribute) {
+    $compatible_vehicles = $wpdb->get_results($wpdb->prepare("
+        SELECT DISTINCT vehicle_name, vehicle_year
+        FROM {$wpdb->prefix}sku_vin_mapping
+        WHERE sku = %s
+        AND (variant_attribute IS NULL OR variant_attribute = '' OR variant_attribute = %s)
+        ORDER BY vehicle_name, vehicle_year
+    ", $sku, $variant_attribute));
+} else {
+    $compatible_vehicles = $wpdb->get_results($wpdb->prepare("
+        SELECT DISTINCT vehicle_name, vehicle_year
+        FROM {$wpdb->prefix}sku_vin_mapping
+        WHERE sku = %s
+        AND (variant_attribute IS NULL OR variant_attribute = '')
+        ORDER BY vehicle_name, vehicle_year
+    ", $sku));
+}
 ?>
 
 <div class="maxus-vehicle-page maxus-product-page">

@@ -55,11 +55,14 @@ $tt_id = $wpdb->get_var($wpdb->prepare(
 // Get products in this subcategory that match vehicle SKUs
 // Supports both simple products and product variations
 // Variations keep their original category relationships
+// Joins on both SKU and variant_attribute for accurate variation matching
 $product_ids = $wpdb->get_col($wpdb->prepare("
     SELECT DISTINCT p.ID
     FROM {$wpdb->posts} p
     INNER JOIN {$wpdb->postmeta} pm_sku ON p.ID = pm_sku.post_id AND pm_sku.meta_key = '_sku'
+    LEFT JOIN {$wpdb->postmeta} pm_var ON p.ID = pm_var.post_id AND pm_var.meta_key = 'attribute_pa_variant'
     INNER JOIN {$wpdb->prefix}sku_vin_mapping svm ON pm_sku.meta_value = svm.sku
+        AND (svm.variant_attribute IS NULL OR svm.variant_attribute = '' OR svm.variant_attribute = pm_var.meta_value)
     INNER JOIN {$wpdb->term_relationships} tr ON p.ID = tr.object_id
     INNER JOIN {$wpdb->term_taxonomy} tt ON tr.term_taxonomy_id = tt.term_taxonomy_id
     WHERE tt.term_id = %d
@@ -84,7 +87,9 @@ if (!empty($product_ids)) {
             svm.variant_attribute
         FROM {$wpdb->posts} p
         INNER JOIN {$wpdb->postmeta} pm_sku ON p.ID = pm_sku.post_id AND pm_sku.meta_key = '_sku'
+        LEFT JOIN {$wpdb->postmeta} pm_var ON p.ID = pm_var.post_id AND pm_var.meta_key = 'attribute_pa_variant'
         LEFT JOIN {$wpdb->prefix}sku_vin_mapping svm ON pm_sku.meta_value = svm.sku AND svm.vin = %s
+            AND (svm.variant_attribute IS NULL OR svm.variant_attribute = '' OR svm.variant_attribute = pm_var.meta_value)
         LEFT JOIN {$wpdb->postmeta} pm_price ON p.ID = pm_price.post_id AND pm_price.meta_key = '_price'
         LEFT JOIN {$wpdb->postmeta} pm_callout ON p.ID = pm_callout.post_id AND pm_callout.meta_key = %s
         LEFT JOIN {$wpdb->postmeta} pm_callout_generic ON p.ID = pm_callout_generic.post_id AND pm_callout_generic.meta_key = 'callout_number'

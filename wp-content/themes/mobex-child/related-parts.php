@@ -96,6 +96,7 @@ function maxus_get_related_diagram_parts($product_id, $diagram_term_id, $limit =
         SELECT p.ID, p.post_title, pm_sku.meta_value as sku,
                COALESCE(pm_callout_cat.meta_value, pm_callout.meta_value) as callout,
                pm_price.meta_value as price,
+               pm_variant.meta_value as variant_attribute,
                variants.variant_count
         FROM {$wpdb->posts} p
         INNER JOIN {$wpdb->term_relationships} tr ON p.ID = tr.object_id
@@ -104,6 +105,7 @@ function maxus_get_related_diagram_parts($product_id, $diagram_term_id, $limit =
         LEFT JOIN {$wpdb->postmeta} pm_callout_cat ON p.ID = pm_callout_cat.post_id AND pm_callout_cat.meta_key = %s
         LEFT JOIN {$wpdb->postmeta} pm_callout ON p.ID = pm_callout.post_id AND pm_callout.meta_key = 'callout_number'
         LEFT JOIN {$wpdb->postmeta} pm_price ON p.ID = pm_price.post_id AND pm_price.meta_key = '_price'
+        LEFT JOIN {$wpdb->postmeta} pm_variant ON p.ID = pm_variant.post_id AND pm_variant.meta_key = 'attribute_pa_variant'
         INNER JOIN (
             SELECT COALESCE(pmc.meta_value, pmg.meta_value) as callout_num,
                    CASE
@@ -135,16 +137,29 @@ function maxus_get_related_diagram_parts($product_id, $diagram_term_id, $limit =
 
 /**
  * Get vehicle compatibility for a SKU from the mapping table
+ * @param string $sku The SKU to lookup
+ * @param string|null $variant_attribute Optional variant attribute to filter by
  */
-function maxus_get_sku_vehicles($sku) {
+function maxus_get_sku_vehicles($sku, $variant_attribute = null) {
     global $wpdb;
 
-    $results = $wpdb->get_results($wpdb->prepare("
-        SELECT DISTINCT vehicle_year, vehicle_name
-        FROM {$wpdb->prefix}sku_vin_mapping
-        WHERE sku = %s
-        ORDER BY vehicle_name, vehicle_year
-    ", $sku));
+    if ($variant_attribute) {
+        $results = $wpdb->get_results($wpdb->prepare("
+            SELECT DISTINCT vehicle_year, vehicle_name
+            FROM {$wpdb->prefix}sku_vin_mapping
+            WHERE sku = %s
+            AND (variant_attribute IS NULL OR variant_attribute = '' OR variant_attribute = %s)
+            ORDER BY vehicle_name, vehicle_year
+        ", $sku, $variant_attribute));
+    } else {
+        $results = $wpdb->get_results($wpdb->prepare("
+            SELECT DISTINCT vehicle_year, vehicle_name
+            FROM {$wpdb->prefix}sku_vin_mapping
+            WHERE sku = %s
+            AND (variant_attribute IS NULL OR variant_attribute = '')
+            ORDER BY vehicle_name, vehicle_year
+        ", $sku));
+    }
 
     if (empty($results)) {
         return '';
@@ -293,7 +308,8 @@ function maxus_display_related_parts($product_id = null) {
                                 $permalink = get_permalink($part->ID);
                                 $price_display = $part->price ? wc_price($part->price) : '<span class="price-na">N/A</span>';
                                 $variant_count = isset($part->variant_count) ? (int)$part->variant_count : 1;
-                                $vehicles = maxus_get_sku_vehicles($part->sku);
+                                $variant_attr = isset($part->variant_attribute) ? $part->variant_attribute : null;
+                                $vehicles = maxus_get_sku_vehicles($part->sku, $variant_attr);
                             ?>
                             <tr class="<?php echo $row_class; ?>" data-callout="<?php echo esc_attr($part->callout); ?>">
                                 <td class="col-callout">

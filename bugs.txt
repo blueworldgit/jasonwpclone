@@ -1,58 +1,684 @@
-Category Structure Analysis
-Maxus brand category not found!
+REMOVE WRONG SUBCATEGORIES FROM LSH14C4C5NA129710 PRODUCTS
+================================================================================
+Mode: DRY-RUN
 
-All top-level categories (parent=0):
-ID: 6298, Name: Air Intake System, Slug: air-intake-system
-ID: 6299, Name: Airbag, Slug: airbag
-ID: 6300, Name: Alternative Hvac, Slug: alternative-hvac
-ID: 6301, Name: Antenna, Slug: antenna
-ID: 6302, Name: Body Interior & Exterior Electronics, Slug: body-interior-exterior-electronics
-ID: 6303, Name: Body Lower Exterior Trim, Slug: body-lower-exterior-trim
-ID: 6304, Name: Body Lower Structure, Slug: body-lower-structure
-ID: 6305, Name: Body Upper Exterior Trim, Slug: body-upper-exterior-trim
-ID: 6306, Name: Body Upper Structure, Slug: body-upper-structure
-ID: 6307, Name: Body Window, Slug: body-window
-ID: 6308, Name: Brakes, Slug: brakes
-ID: 6309, Name: Bumpers,Fascia & Grille, Slug: bumpersfascia-grille
-ID: 6310, Name: Charging & Energystorage, Slug: charging-energystorage
-ID: 6311, Name: Chassis Structure, Slug: chassis-structure
-ID: 6312, Name: Communicate, Slug: communicate
-ID: 6313, Name: Customer Switches, Slug: customer-switches
-ID: 6314, Name: Driver Information, Slug: driver-information
-ID: 6315, Name: Emission Exhaust System, Slug: emission-exhaust-system
-ID: 6316, Name: Entertainment, Slug: entertainment
-ID: 6317, Name: Front Closures Front End Sheetmetal, Slug: front-closures-front-end-sheetmetal
-ID: 6318, Name: Front Lamp, Slug: front-lamp
-ID: 6319, Name: Frontexterior Hvac Airflow, Slug: frontexterior-hvac-airflow
-ID: 6320, Name: Frontinterior Hvac Airflow, Slug: frontinterior-hvac-airflow
-ID: 6321, Name: Fuel Storage & Handling, Slug: fuel-storage-handling
-ID: 6322, Name: Hvac & Powertrain Coolingin, Slug: hvac-powertrain-coolingin
-ID: 6323, Name: Instrument Panel & Console, Slug: instrument-panel-console
-ID: 6324, Name: Interior Acoustic Syetem, Slug: interior-acoustic-syetem
-ID: 6325, Name: Interior Lamp, Slug: interior-lamp
-ID: 6326, Name: Interior Trim, Slug: interior-trim
-ID: 6327, Name: Mounts, Slug: mounts
-ID: 6328, Name: On Vehicle Attachments & Tools, Slug: on-vehicle-attachments-tools
-ID: 6329, Name: Pickup Box, Slug: pickup-box
-ID: 29779, Name: Pipe, Slug: pipe
-ID: 6330, Name: Power & Signaldistribution, Slug: power-signaldistribution
-ID: 6331, Name: Power Energy Storage & Link Wire, Slug: power-energy-storage-link-wire
-ID: 6332, Name: Power Generation, Slug: power-generation
-ID: 6333, Name: Power Transmission, Slug: power-transmission
-ID: 6334, Name: Powertrain Control & Diagnostic, Slug: powertrain-control-diagnostic
-ID: 6335, Name: Powertrain Driver Interface, Slug: powertrain-driver-interface
-ID: 6336, Name: Rear Closure, Slug: rear-closure
-ID: 6337, Name: Rear Lamp, Slug: rear-lamp
-ID: 6338, Name: Rear View Mirror, Slug: rear-view-mirror
-ID: 6339, Name: Rearinterior Hvac Airflow, Slug: rearinterior-hvac-airflow
-ID: 6340, Name: Safety & Avoidance, Slug: safety-avoidance
-ID: 6341, Name: Safety Belt, Slug: safety-belt
-ID: 6342, Name: Sealant & Body Attachment, Slug: sealant-body-attachment
-ID: 6343, Name: Seats, Slug: seats
-ID: 6344, Name: Side Closures, Slug: side-closures
-ID: 6345, Name: Steering, Slug: steering
-ID: 6346, Name: Suspension, Slug: suspension
-ID: 6347, Name: Tire,Wheels,Wheel Trim, Slug: tirewheelswheel-trim
-ID: 6348, Name: Wiper & Washer, Slug: wiper-washer
-SKU-VIN Mapping Check
-SKUs mapped to VIN 'LSFAM120XNA160733': 863
+Wrong categories and their subcategories:
+
+Air Intake System (ID: 6298)
+  - Air Cleaner (ID: 6350)
+  - Air filter (ID: 6349)
+
+Emission Exhaust System (ID: 6315)
+  - EmissionExhaustSystem-Euro VI (ID: 6468)
+  - Exhaust system (ID: 6465)
+  - Exhaust system - D20 (ID: 6466)
+  - Exhaust system - gasoline engine (ID: 6467)
+
+Fuel Storage & Handling (ID: 6321)
+  - Coarse Filter & Hardware(Cuba) (ID: 6491)
+  - Fuel Plumbing & Hardware (ID: 6486)
+  - Fuel Tank & Canister (ID: 6487)
+  - FuelPlumbing&Hardware-D20 (ID: 6492)
+  - Urea system (ID: 6488)
+  - Urea system-D20 (ID: 6493)
+  - Urea system-Euro VI (ID: 6494)
+
+Power Generation (ID: 6332)
+  - Accessory,Accessory Drive-EURO 5-6 (ID: 6648)
+  - Accessory,AccessoryDrive-EURO 4 (ID: 6649)
+  - Accessory&Accessory Drive-D20 (ID: 6625)
+  - Accessory&AccessoryDrive (ID: 6602)
+  - Accessory&AccessoryDrive1 (ID: 6624)
+  - Block Group (ID: 6603)
+  - Coolant Pump And Inl & Otlt Tube,Thermostat-EURO 5-6 (ID: 6650)
+  - Coolant Pump And Inl&OtltTube-D20 (ID: 6626)
+  - Coolant Pump And Inl&OtltTube&Thermostat (ID: 6604)
+  - CoolantPumpAndInl&OtltTube,Thermostat-EURO 4 (ID: 6651)
+  - Crankshaft Rod (ID: 6605)
+  - Crankshaft Rod-D20 (ID: 6627)
+  - Cylinder Block&Accessory (ID: 6606)
+  - Cylinder Block&Accessory-D20 (ID: 6628)
+  - Cylinder Head (ID: 6607)
+  - Cylinder Head-D20 (ID: 6629)
+  - CylinderBlock,CylinderLiner,Flywheel (ID: 6653)
+  - CylinderBlockAccessory (ID: 29883)
+  - Damper Pulley&GearDrive (ID: 6608)
+  - DamperPulley,GearDrive (ID: 6656)
+  - EGR ASM (ID: 6609)
+  - EGR ASM-D20 (ID: 6630)
+  - EGR ASM-EURO 4 (ID: 6657)
+  - EGR ASM-EURO 5-6 (ID: 6658)
+  - Engine Accessory (ID: 6610)
+  - Engine Accessory-D20 (ID: 6631)
+  - Engine Accessory-EURO 5-6 (ID: 6659)
+  - Engine ASM (ID: 6611)
+  - Engine ASM-D20 (ID: 6633)
+  - Engine ASM-D20(STP) (ID: 6632)
+  - Engine ASM-D20（STP） (ID: 29794)
+  - Engine ASM1 (ID: 6644)
+  - Engine shield (ID: 6612)
+  - Engine shield1 (ID: 6645)
+  - Engine shield2 (ID: 6646)
+  - Engine shield3 (ID: 6647)
+  - Engine wiring harness (ID: 6613)
+  - Engine-EURO 5-6 (ID: 6660)
+  - Exhaust Elbow,Turbocharger-EURO 5-6 (ID: 6662)
+  - Exhaust Elbow&Turbocharger (ID: 6614)
+  - Exhaust Elbow&Turbocharger-D20 (ID: 6634)
+  - ExhaustElbow,Turbocharger-EURO 4 (ID: 6663)
+  - Fuel System (ID: 6615)
+  - HalfCylinderBlockGroup-EURO 5-6 (ID: 6665)
+  - Head Cover&PCV (ID: 6616)
+  - Head Cover&PCV-D20 (ID: 6635)
+  - HeadCover,PCV (ID: 6666)
+  - Intake and Exhaust Manifold-EURO 5-6 (ID: 6667)
+  - IntakeandExhaustManifold-EURO 4 (ID: 6668)
+  - JE11CA001 - Engine ASM (ID: 29806)
+  - JE11CA002 - Block Group (ID: 29807)
+  - JE11CB001 - Cylinder BlockandAccessory (ID: 29808)
+  - JE11CC001 - Cylinder Head (ID: 29809)
+  - JE11CD001 - Head CoverandPCV (ID: 29810)
+  - JE11CE001 - Crankshaft Rod (ID: 29811)
+  - JE11CF001 - SHAFT-BALANCER (ID: 29812)
+  - JE11CG001 - MANIFOLD ASM-INT (ID: 29813)
+  - JE11CH001 - Exhaust ElbowandTurbocharger (ID: 29814)
+  - JE11CI001 - Fuel System (ID: 29815)
+  - JE11CJ001 - Oil Cooler And InlandOtltTubeandFilter (ID: 29816)
+  - JE11CK001 - SumpandOil Suction PipeandDipstick (ID: 29817)
+  - JE11CL001 - Coolant Pump And InlandOtltTubeandThermostat (ID: 29818)
+  - JE11CM001 - Damper PulleyandGearDrive (ID: 29819)
+  - JE11CP001 - Timing Drive (ID: 29820)
+  - JE11CQ001 - AccessoryandAccessoryDrive (ID: 29821)
+  - JE11CR001 - SensorandHarness (ID: 29822)
+  - JE11CS001 - EGR ASM (ID: 29823)
+  - JE11CT001 - Engine Accessory (ID: 29824)
+  - JE11CU001 - LP-EGR intake pipeandAccessory (ID: 29825)
+  - JE11CW001 - Engine wiring harness (ID: 29826)
+  - JE11CX001 - Engine shield (ID: 29827)
+  - LP-EGR intake pipe&Accessory (ID: 6617)
+  - MANIFOLD ASM-INT (ID: 6618)
+  - MANIFOLD ASM-INT-D20 (ID: 6636)
+  - Oil Cooler And Inl & Otlt Tube,Filter-EURO 5-6 (ID: 6669)
+  - Oil Cooler And Inl&OtltTube&Filter (ID: 6619)
+  - Oil Cooler And Inl&OtltTube&Filter-D20 (ID: 6637)
+  - Oil pumps&vacuum pumps&vacuum tube components-D20 (ID: 6638)
+  - OilCoolerAndInl&OtltTube,Filter-EURO 4 (ID: 6670)
+  - Sensor,Harness-EURO 4 (ID: 6671)
+  - Sensor,Harness-EURO 5-6 (ID: 6676)
+  - Sensor&Harness (ID: 6620)
+  - Sensor&Harness-D20 (ID: 6639)
+  - SensorHarness-EURO 5 (ID: 29884)
+  - SHAFT-BALANCER (ID: 6621)
+  - SHAFT-BALANCER-D20 (ID: 6640)
+  - Sump,Oil Suction Pipe,Dipstick,Balancer-EURO 5-6 (ID: 6673)
+  - Sump，OilSuctionPipe,Dipstick,Balancer-EURO 4 (ID: 6674)
+  - Sump&Oil Suction Pipe&Dipstick (ID: 6622)
+  - Sump&Oil Suction Pipe&Dipstick-D20 (ID: 6641)
+  - Timing Drive (ID: 6623)
+  - Timing Drive-D20 (ID: 6642)
+  - uel System-D20 (ID: 6643)
+  - XE11CA001 - Engine ASM (ID: 29866)
+  - XE11CA002 - Block Group (ID: 29851)
+  - XE11CB001 - Cylinder BlockandAccessory (ID: 29868)
+  - XE11CC001 - Cylinder Head (ID: 29863)
+  - XE11CD001 - Head CoverandPCV (ID: 29854)
+  - XE11CE001 - Crankshaft Rod (ID: 29869)
+  - XE11CF001 - SHAFT-BALANCER (ID: 29859)
+  - XE11CG001 - MANIFOLD ASM-INT (ID: 29864)
+  - XE11CH001 - Exhaust ElbowandTurbocharger (ID: 29850)
+  - XE11CI001 - Fuel System (ID: 29865)
+  - XE11CJ001 - Oil Cooler And InlandOtltTubeandFilter (ID: 29862)
+  - XE11CK001 - SumpandOil Suction PipeandDipstick (ID: 29855)
+  - XE11CL001 - Coolant Pump And InlandOtltTubeandThermostat (ID: 29867)
+  - XE11CM001 - Damper PulleyandGearDrive (ID: 29870)
+  - XE11CP001 - Timing Drive (ID: 29857)
+  - XE11CQ001 - AccessoryandAccessoryDrive (ID: 29856)
+  - XE11CR001 - SensorandHarness (ID: 29858)
+  - XE11CS001 - EGR ASM (ID: 29852)
+  - XE11CT001 - Engine Accessory (ID: 29853)
+  - XE11CW001 - Engine wiring harness (ID: 29861)
+  - XE11CX001 - Engine shield (ID: 29860)
+
+Total category IDs to remove: 131
+
+================================================================================
+Found 132 products with wrong categories/subcategories:
+================================================================================
+
+C00185606: ASSEMBLY-CYLINDER BLOCK THERMOSTAT BYPASS HOSE
+  Wrong categories: Coolant Pump And Inl&OtltTube-D20, JE11CL001 - Coolant Pump And InlandOtltTubeandThermostat, Power Generation, XE11CL001 - Coolant Pump And InlandOtltTubeandThermostat
+  [DRY-RUN] Would remove these categories
+
+C00211246: ASSEMBLY-CYLINDER BLOCK THERMOSTAT BYPASS HOSE
+  Wrong categories: Coolant Pump And Inl&OtltTube-D20, JE11CL001 - Coolant Pump And InlandOtltTubeandThermostat, Power Generation, XE11CL001 - Coolant Pump And InlandOtltTubeandThermostat
+  [DRY-RUN] Would remove these categories
+
+C00090601: ASSY-ENGINE OIL LEVEL GAUGE ROD
+  Wrong categories: JE11CK001 - SumpandOil Suction PipeandDipstick, Power Generation, XE11CK001 - SumpandOil Suction PipeandDipstick
+  [DRY-RUN] Would remove these categories
+
+C00075679: ASSY-LASH ADJUSTER
+  Wrong categories: Cylinder Head-D20, JE11CC001 - Cylinder Head, Power Generation, XE11CC001 - Cylinder Head
+  [DRY-RUN] Would remove these categories
+
+C00187143: ASSY-OIL PUMP CASE
+  Wrong categories: JE11CM001 - Damper PulleyandGearDrive, Oil pumps&vacuum pumps&vacuum tube components-D20, Power Generation, XE11CM001 - Damper PulleyandGearDrive
+  [DRY-RUN] Would remove these categories
+
+B00006003: BLOT-GENERATOR ASSEMBLY
+  Wrong categories: Accessory&Accessory Drive-D20, JE11CQ001 - AccessoryandAccessoryDrive, Power Generation, XE11CQ001 - AccessoryandAccessoryDrive
+  [DRY-RUN] Would remove these categories
+
+C00017370: BOLT-AIR CLEANER OUTLET HOSE BRACKET
+  Wrong categories: Air Cleaner, Air filter, Air Intake System
+  [DRY-RUN] Would remove these categories
+
+B00006026: BOLT-BACK UP HORN
+  Wrong categories: EGR ASM-D20, Exhaust Elbow&Turbocharger-D20, JE11CH001 - Exhaust ElbowandTurbocharger, JE11CI001 - Fuel System, JE11CK001 - SumpandOil Suction PipeandDipstick, 
+JE11CL001 - Coolant Pump And InlandOtltTubeandThermostat, Power Generation, Sump&Oil Suction Pipe&Dipstick-D20, XE11CH001 - Exhaust ElbowandTurbocharger, XE11CI001 - Fuel System, XE11CK001 - SumpandOil Suction PipeandDipstick, XE11CL001 - Coolant Pump And InlandOtltTubeandThermostat
+  [DRY-RUN] Would remove these categories
+
+C00077261: BOLT-BALANCE SHAFT
+  Wrong categories: JE11CF001 - SHAFT-BALANCER, Power Generation, SHAFT-BALANCER-D20, XE11CF001 - SHAFT-BALANCER
+  [DRY-RUN] Would remove these categories
+
+C00066129: BOLT-BRACKET ASSEMBLY TO BULKHEAD
+  Wrong categories: Emission Exhaust System, EmissionExhaustSystem-Euro VI, Fuel Storage & Handling, Urea system
+  [DRY-RUN] Would remove these categories
+
+C00077428: BOLT-CRANKSHAFT TIMING SPROCKET
+  Wrong categories: Crankshaft Rod-D20, JE11CE001 - Crankshaft Rod, Power Generation, XE11CE001 - Crankshaft Rod
+  [DRY-RUN] Would remove these categories
+
+B00006012: BOLT-FLYWHEEL CASING TO MACHINE
+  Wrong categories: Cylinder Block&Accessory-D20, JE11CB001 - Cylinder BlockandAccessory, 
+Power Generation, XE11CB001 - Cylinder BlockandAccessory
+  [DRY-RUN] Would remove these categories
+
+C00232257: BOLT-FUEL FILTER TO FRAME
+  Wrong categories: JE11CD001 - Head CoverandPCV, Power Generation, Sump&Oil Suction Pipe&Dipstick-D20, XE11CD001 - Head CoverandPCV, XE11CK001 - SumpandOil Suction PipeandDipstick  [DRY-RUN] Would remove these categories
+
+B00006047: BOLT-INJECTOR FIXING
+  Wrong categories: JE11CI001 - Fuel System, Power Generation, uel System-D20, XE11CI001 - Fuel System
+  [DRY-RUN] Would remove these categories
+
+B00006050: BOLT-OIL PUMP TO CYLINDER BLOCK
+  Wrong categories: JE11CM001 - Damper PulleyandGearDrive, Oil pumps&vacuum pumps&vacuum tube components-D20, Power Generation, XE11CM001 - Damper PulleyandGearDrive
+  [DRY-RUN] Would remove these categories
+
+C00003686: BOLT-PARKING BRAKE TO REAR AXEL
+  Wrong categories: Emission Exhaust System, Exhaust system
+  [DRY-RUN] Would remove these categories
+
+B00006013: BOLT-REAR MOUNTING BRACKET TO TRANSMISSION
+  Wrong categories: Cylinder Block&Accessory-D20, JE11CB001 - Cylinder BlockandAccessory, 
+Power Generation, XE11CB001 - Cylinder BlockandAccessory
+  [DRY-RUN] Would remove these categories
+
+C00076245: BOLT-SHAFT INTERMEDIATE GEAR
+  Wrong categories: JE11CF001 - SHAFT-BALANCER, Power Generation, SHAFT-BALANCER-D20, XE11CF001 - SHAFT-BALANCER
+  [DRY-RUN] Would remove these categories
+
+B00006008: BOLT-TURBINE TO INTERCOOLER PIPE BRACKET
+  Wrong categories: Head Cover&PCV-D20, JE11CD001 - Head CoverandPCV, JE11CK001 - SumpandOil Suction PipeandDipstick, Power Generation, Sump&Oil Suction Pipe&Dipstick-D20, XE11CD001 - Head CoverandPCV, XE11CK001 - SumpandOil Suction PipeandDipstick
+  [DRY-RUN] Would remove these categories
+
+C00224808: BOLT-TURBINE TO INTERCOOLER PIPE BRACKET
+  Wrong categories: JE11CD001 - Head CoverandPCV, Power Generation, Sump&Oil Suction Pipe&Dipstick-D20, XE11CD001 - Head CoverandPCV, XE11CK001 - SumpandOil Suction PipeandDipstick  [DRY-RUN] Would remove these categories
+
+C00085311: BOLT-TURBOCHARGER
+  Wrong categories: Exhaust Elbow&Turbocharger-D20, JE11CH001 - Exhaust ElbowandTurbocharger, Power Generation, XE11CH001 - Exhaust ElbowandTurbocharger
+  [DRY-RUN] Would remove these categories
+
+B00006014: BOLT/SCREW-BODY CONTROL MODULE BRACKET ASSEMBLY
+  Wrong categories: JE11CH001 - Exhaust ElbowandTurbocharger, JE11CI001 - Fuel System, Power Generation
+  [DRY-RUN] Would remove these categories
+
+C00073528: BOLT/SCREW-CONNECTOR ROD
+  Wrong categories: Crankshaft Rod-D20, JE11CE001 - Crankshaft Rod, Power Generation, XE11CE001 - Crankshaft Rod
+  [DRY-RUN] Would remove these categories
+
+C00076113: BOLT/SCREW-CRANKSHAFT RELUCTOR WHEEL
+  Wrong categories: Crankshaft Rod-D20, JE11CE001 - Crankshaft Rod, Power Generation, XE11CE001 - Crankshaft Rod
+  [DRY-RUN] Would remove these categories
+
+C00073692: BOLT/SCREW-CRANKSHAFT TORQUE DMPR
+  Wrong categories: Crankshaft Rod-D20, JE11CE001 - Crankshaft Rod, Power Generation, XE11CE001 - Crankshaft Rod
+  [DRY-RUN] Would remove these categories
+
+C00075800: BOLT/SCREW-CYLINDER HEAD
+  Wrong categories: Cylinder Head-D20, JE11CC001 - Cylinder Head, Power Generation, XE11CC001 - Cylinder Head
+  [DRY-RUN] Would remove these categories
+
+C00112093: BOLT/SCREW-ENGINE VACUUM PUMP
+  Wrong categories: JE11CM001 - Damper PulleyandGearDrive, Oil pumps&vacuum pumps&vacuum tube components-D20, Power Generation, XE11CM001 - Damper PulleyandGearDrive
+  [DRY-RUN] Would remove these categories
+
+C00100170: BOLT/SCREW-FLYWHEEL
+  Wrong categories: JE11CE001 - Crankshaft Rod, Power Generation, XE11CE001 - Crankshaft Rod
+  [DRY-RUN] Would remove these categories
+
+C00090363: BOLT/SCREW-OIL PAN DRAIN
+  Wrong categories: JE11CK001 - SumpandOil Suction PipeandDipstick, Power Generation, Sump&Oil Suction Pipe&Dipstick-D20, XE11CK001 - SumpandOil Suction PipeandDipstick
+  [DRY-RUN] Would remove these categories
+
+C00888852: BOLT/SCREW-SIDE SKIRT MID TRIM PANEL
+  Wrong categories: Fuel Storage & Handling, Urea system
+  [DRY-RUN] Would remove these categories
+
+C00104774: BOLT/STUD-STARTER MOTOR
+  Wrong categories: JE11CQ001 - AccessoryandAccessoryDrive, Power Generation, XE11CQ001 - 
+AccessoryandAccessoryDrive
+  [DRY-RUN] Would remove these categories
+
+C00118992: BRACKET-ACCESSORIES
+  Wrong categories: Accessory&Accessory Drive-D20, JE11CQ001 - AccessoryandAccessoryDrive, Power Generation, XE11CQ001 - AccessoryandAccessoryDrive
+  [DRY-RUN] Would remove these categories
+
+C00205306: BRACKET-ACCESSORIES
+  Wrong categories: Accessory&Accessory Drive-D20, JE11CQ001 - AccessoryandAccessoryDrive, Power Generation, XE11CQ001 - AccessoryandAccessoryDrive
+  [DRY-RUN] Would remove these categories
+
+B00006019: BRACKET-ACCESSORIES
+  Wrong categories: JE11CI001 - Fuel System, JE11CQ001 - AccessoryandAccessoryDrive, Power Generation, uel System-D20, XE11CQ001 - AccessoryandAccessoryDrive
+  [DRY-RUN] Would remove these categories
+
+C00074545: BRACKET-ENGINE LEFT HAND FRONT MOUNTING
+  Wrong categories: JE11CT001 - Engine Accessory, Power Generation
+  [DRY-RUN] Would remove these categories
+
+C00074546: BRACKET-ENGINE RIGHT HAND FRONT MOUNTING
+  Wrong categories: JE11CT001 - Engine Accessory, Power Generation
+  [DRY-RUN] Would remove these categories
+
+C00154341: BRACKET-PUR COVER TO ENGINE
+  Wrong categories: JE11CX001 - Engine shield, Power Generation
+  [DRY-RUN] Would remove these categories
+
+C00229774: BRACKET-PUR COVER TO ENGINE
+  Wrong categories: JE11CX001 - Engine shield, Power Generation
+  [DRY-RUN] Would remove these categories
+
+C00078100: BUSHING-BALANCE SHAFT FRONT
+  Wrong categories: JE11CF001 - SHAFT-BALANCER, Power Generation, SHAFT-BALANCER-D20, XE11CF001 - SHAFT-BALANCER
+  [DRY-RUN] Would remove these categories
+
+C00078118: BUSHING-BALANCE SHAFT REAR
+  Wrong categories: JE11CF001 - SHAFT-BALANCER, Power Generation, SHAFT-BALANCER-D20, XE11CF001 - SHAFT-BALANCER
+  [DRY-RUN] Would remove these categories
+
+C00157176: BUSHING-MANIFOLD-EXHAUST
+  Wrong categories: Exhaust Elbow&Turbocharger-D20, JE11CH001 - Exhaust ElbowandTurbocharger, Power Generation, XE11CH001 - Exhaust ElbowandTurbocharger
+  [DRY-RUN] Would remove these categories
+
+C00184782: CAMSHAFT COVER
+  Wrong categories: Head Cover&PCV-D20, JE11CD001 - Head CoverandPCV, Power Generation, XE11CD001 - Head CoverandPCV
+  [DRY-RUN] Would remove these categories
+
+C00091603: CAP-CYLINDER BLOCK
+  Wrong categories: Cylinder Block&Accessory-D20, JE11CB001 - Cylinder BlockandAccessory, 
+Power Generation, XE11CB001 - Cylinder BlockandAccessory
+  [DRY-RUN] Would remove these categories
+
+C00091605: CAP-WATER JACKET
+  Wrong categories: Cylinder Head-D20, JE11CC001 - Cylinder Head, Power Generation, XE11CC001 - Cylinder Head
+  [DRY-RUN] Would remove these categories
+
+C00091604: CAP-WATER JACKET
+  Wrong categories: Cylinder Head-D20, JE11CC001 - Cylinder Head, Power Generation, XE11CC001 - Cylinder Head
+  [DRY-RUN] Would remove these categories
+
+C00185546: CLAMP-CYLINDER BLOCK THERMOSTAT BYPASS HOSE
+  Wrong categories: Coolant Pump And Inl&OtltTube-D20, JE11CL001 - Coolant Pump And InlandOtltTubeandThermostat, Power Generation, XE11CL001 - Coolant Pump And InlandOtltTubeandThermostat
+  [DRY-RUN] Would remove these categories
+
+C00185553: CLAMP-CYLINDER HEAD THERMOSTAT BYPASS HOSE
+  Wrong categories: Coolant Pump And Inl&OtltTube-D20, JE11CL001 - Coolant Pump And InlandOtltTubeandThermostat, Power Generation, XE11CL001 - Coolant Pump And InlandOtltTubeandThermostat
+  [DRY-RUN] Would remove these categories
+
+C00185533: CLAMP-HP EXHAUST GAS RECIRCULATION COOLER INLET WATER HOSE
+  Wrong categories: Coolant Pump And Inl&OtltTube-D20, JE11CL001 - Coolant Pump And InlandOtltTubeandThermostat, Power Generation, XE11CL001 - Coolant Pump And InlandOtltTubeandThermostat
+  [DRY-RUN] Would remove these categories
+
+C00185559: CLAMP-HP EXHAUST GAS RECIRCULATION COOLER OUT WATER HOSE
+  Wrong categories: EGR ASM-D20, JE11CS001 - EGR ASM, Power Generation, XE11CS001 - EGR ASM
+  [DRY-RUN] Would remove these categories
+
+C00107565: CLAMP-INJECTOR
+  Wrong categories: JE11CI001 - Fuel System, Power Generation, uel System-D20, XE11CI001 - Fuel System
+  [DRY-RUN] Would remove these categories
+
+C00185538: CLAMP-LAMP EXHAUST GAS RECIRCULATION COOLER INLET WATER HOSE
+  Wrong categories: Coolant Pump And Inl&OtltTube-D20, JE11CL001 - Coolant Pump And InlandOtltTubeandThermostat, Power Generation
+  [DRY-RUN] Would remove these categories
+
+C00185536: CLAMP-LAMP EXHAUST GAS RECIRCULATION COOLER INLET WATER HOSE
+  Wrong categories: Coolant Pump And Inl&OtltTube-D20, JE11CL001 - Coolant Pump And InlandOtltTubeandThermostat, Power Generation
+  [DRY-RUN] Would remove these categories
+
+C00185555: CLAMP-LITTLE CIRCLE WATER PIPE
+  Wrong categories: JE11CJ001 - Oil Cooler And InlandOtltTubeandFilter, Oil Cooler And Inl&OtltTube&Filter-D20, Power Generation, XE11CJ001 - Oil Cooler And InlandOtltTubeandFilter  [DRY-RUN] Would remove these categories
+
+C00071910: COLLET-VALVE
+  Wrong categories: Cylinder Head-D20, JE11CC001 - Cylinder Head, Power Generation, XE11CC001 - Cylinder Head
+  [DRY-RUN] Would remove these categories
+
+C00204309: COVER-HP RAIL INSULATION
+  Wrong categories: Head Cover&PCV-D20, JE11CD001 - Head CoverandPCV, Power Generation    
+  [DRY-RUN] Would remove these categories
+
+C00211245: CYLINDER HEAD THERMOSTAT BYPASS HOSE ASSEMBLY
+  Wrong categories: Coolant Pump And Inl&OtltTube-D20, JE11CL001 - Coolant Pump And InlandOtltTubeandThermostat, Power Generation, XE11CL001 - Coolant Pump And InlandOtltTubeandThermostat
+  [DRY-RUN] Would remove these categories
+
+C00185605: CYLINDER HEAD THERMOSTAT BYPASS HOSE ASSEMBLY
+  Wrong categories: Coolant Pump And Inl&OtltTube-D20, JE11CL001 - Coolant Pump And InlandOtltTubeandThermostat, Power Generation, XE11CL001 - Coolant Pump And InlandOtltTubeandThermostat
+  [DRY-RUN] Would remove these categories
+
+C00089672: DOWEL SLEEVE-CYLINDER HEAD & CAM BEARING FRAME
+  Wrong categories: Cylinder Head-D20, JE11CC001 - Cylinder Head, Power Generation, XE11CC001 - Cylinder Head
+  [DRY-RUN] Would remove these categories
+
+C00089671: DOWEL SLEEVE-CYLINDER HEAD TO CYLINDER BLOCK
+  Wrong categories: Cylinder Block&Accessory-D20, JE11CB001 - Cylinder BlockandAccessory, 
+Power Generation, XE11CB001 - Cylinder BlockandAccessory
+  [DRY-RUN] Would remove these categories
+
+C00089667: DOWEL SLEEVE-FLYWHEEL CASING TO MACHINE
+  Wrong categories: Cylinder Block&Accessory-D20, JE11CB001 - Cylinder BlockandAccessory, 
+Power Generation, XE11CB001 - Cylinder BlockandAccessory
+  [DRY-RUN] Would remove these categories
+
+C00089670: DOWEL SLEEVE-FLYWHEEL CASING TO TRANSMISSION
+  Wrong categories: Cylinder Block&Accessory-D20, JE11CB001 - Cylinder BlockandAccessory, 
+Power Generation, XE11CB001 - Cylinder BlockandAccessory
+  [DRY-RUN] Would remove these categories
+
+C00089673: DOWEL SLEEVE-STARTER
+  Wrong categories: Accessory&Accessory Drive-D20, JE11CB001 - Cylinder BlockandAccessory, Power Generation, XE11CB001 - Cylinder BlockandAccessory
+  [DRY-RUN] Would remove these categories
+
+C00085281: FRAME PARTS-CAMSHAFT BEARING
+  Wrong categories: Head Cover&PCV-D20, JE11CD001 - Head CoverandPCV, Power Generation, XE11CD001 - Head CoverandPCV
+  [DRY-RUN] Would remove these categories
+
+C00086306: GASKET-EXHAUST GAS RECIRCULATION COOLER
+  Wrong categories: EGR ASM-D20, JE11CS001 - EGR ASM, Power Generation, XE11CS001 - EGR ASM
+  [DRY-RUN] Would remove these categories
+
+C00473659: GASKET-EXHAUST GAS RECIRCULATION COOLER
+  Wrong categories: EGR ASM-D20, JE11CS001 - EGR ASM, Power Generation, XE11CS001 - EGR ASM
+  [DRY-RUN] Would remove these categories
+
+C00180602: GASKET-OIL FILTER COOLER MODUL PODIUM
+  Wrong categories: JE11CJ001 - Oil Cooler And InlandOtltTubeandFilter, Oil Cooler And Inl&OtltTube&Filter-D20, Power Generation, XE11CJ001 - Oil Cooler And InlandOtltTubeandFilter  [DRY-RUN] Would remove these categories
+
+C00090367: GASKET-OIL PAN DRAIN BOLT/SCREW
+  Wrong categories: JE11CK001 - SumpandOil Suction PipeandDipstick, Power Generation, Sump&Oil Suction Pipe&Dipstick-D20, XE11CK001 - SumpandOil Suction PipeandDipstick
+  [DRY-RUN] Would remove these categories
+
+C00218120: GASKET-TURBOCHARGER OIL RETURN PIPE
+  Wrong categories: Exhaust Elbow&Turbocharger-D20, JE11CH001 - Exhaust ElbowandTurbocharger, Power Generation, XE11CH001 - Exhaust ElbowandTurbocharger
+  [DRY-RUN] Would remove these categories
+
+C00197291: GEAR-EXHAUST MASS BALANCING SHAFT
+  Wrong categories: JE11CF001 - SHAFT-BALANCER, Power Generation, SHAFT-BALANCER-D20, XE11CF001 - SHAFT-BALANCER
+  [DRY-RUN] Would remove these categories
+
+C00197288: GEAR-INTAKE MASS BALANCING SHAFT
+  Wrong categories: JE11CF001 - SHAFT-BALANCER, Power Generation, SHAFT-BALANCER-D20, XE11CF001 - SHAFT-BALANCER
+  [DRY-RUN] Would remove these categories
+
+C00128220: HEAT SHIELD-ENGINE EXHAUST
+  Wrong categories: JE11CH001 - Exhaust ElbowandTurbocharger, Power Generation
+  [DRY-RUN] Would remove these categories
+
+C00185594: HOSE ASSEMBLY-HP EXHAUST GAS RECIRCULATION COOLER OUT WATER
+  Wrong categories: EGR ASM-D20, JE11CS001 - EGR ASM, Power Generation, XE11CS001 - EGR ASM
+  [DRY-RUN] Would remove these categories
+
+C00185581: HOSE ASSEMBLY-OIL COOLER INLET WATER
+  Wrong categories: JE11CJ001 - Oil Cooler And InlandOtltTubeandFilter, Oil Cooler And Inl&OtltTube&Filter-D20, Power Generation
+  [DRY-RUN] Would remove these categories
+
+C00088435: HOSE-EXHAUST GAS RECIRCULATION BYPASS VALVE VACUUM VALVE
+  Wrong categories: JE11CR001 - SensorandHarness, Power Generation, XE11CR001 - SensorandHarness
+  [DRY-RUN] Would remove these categories
+
+C00197479: IDLER PULLEY GATES-ACCESSORY BELT
+  Wrong categories: Accessory&Accessory Drive-D20, JE11CQ001 - AccessoryandAccessoryDrive, Power Generation, XE11CQ001 - AccessoryandAccessoryDrive
+  [DRY-RUN] Would remove these categories
+
+C00138891: IDLER PULLEY GATES-ACCESSORY BELT
+  Wrong categories: Accessory&Accessory Drive-D20, JE11CQ001 - AccessoryandAccessoryDrive, Power Generation, XE11CQ001 - AccessoryandAccessoryDrive
+  [DRY-RUN] Would remove these categories
+
+C00077430: IDLER PULLEY-TIMING
+  Wrong categories: JE11CP001 - Timing Drive, Power Generation, Timing Drive-D20, XE11CP001 - Timing Drive
+  [DRY-RUN] Would remove these categories
+
+C00077423: IDLER PULLEY-TIMING
+  Wrong categories: JE11CP001 - Timing Drive, Power Generation, Timing Drive-D20, XE11CP001 - Timing Drive
+  [DRY-RUN] Would remove these categories
+
+C00198891: INTERMEDIATE GEAR MBS ASSEMBLY
+  Wrong categories: JE11CF001 - SHAFT-BALANCER, Power Generation, SHAFT-BALANCER-D20, XE11CF001 - SHAFT-BALANCER
+  [DRY-RUN] Would remove these categories
+
+C00185593: LAMP EXHAUST GAS RECIRCULATION COOLER IN WATER HOSE ASSEMBLY
+  Wrong categories: JE11CL001 - Coolant Pump And InlandOtltTubeandThermostat, Power Generation
+  [DRY-RUN] Would remove these categories
+
+C00162402: LOW PRESSURE EXHAUST GAS RECIRCULATION MESH
+  Wrong categories: EGR ASM-D20, JE11CU001 - LP-EGR intake pipeandAccessory, Power Generation
+  [DRY-RUN] Would remove these categories
+
+C00071918: MOUT-AIR SPRING UPPER
+  Wrong categories: Cylinder Head-D20, JE11CC001 - Cylinder Head, Power Generation, XE11CC001 - Cylinder Head
+  [DRY-RUN] Would remove these categories
+
+C00079457: NEEDLE BEARING- CRANKSHAFT REAR END
+  Wrong categories: JE11CE001 - Crankshaft Rod, Power Generation
+  [DRY-RUN] Would remove these categories
+
+C00076114: NEEDLE BEARING-MASS BALANCING SHAFT
+  Wrong categories: JE11CF001 - SHAFT-BALANCER, Power Generation, SHAFT-BALANCER-D20, XE11CF001 - SHAFT-BALANCER
+  [DRY-RUN] Would remove these categories
+
+C00079184: NOZZLE-PISTON COOLING
+  Wrong categories: Crankshaft Rod-D20, JE11CE001 - Crankshaft Rod, Power Generation, XE11CE001 - Crankshaft Rod
+  [DRY-RUN] Would remove these categories
+
+C00085305: NUT-EXHAUST MANIFOLD
+  Wrong categories: Exhaust Elbow&Turbocharger-D20, JE11CH001 - Exhaust ElbowandTurbocharger, Power Generation, XE11CH001 - Exhaust ElbowandTurbocharger
+  [DRY-RUN] Would remove these categories
+
+C00088574: NUT-HIGH PRESSURE PUMP PUMP SPROCKET CONNECTOR
+  Wrong categories: JE11CP001 - Timing Drive, Power Generation, Timing Drive-D20, XE11CP001 - Timing Drive
+  [DRY-RUN] Would remove these categories
+
+B00004040: NUT-REAR BUMPER SIDE PANEL TO REAR SIDE BODY
+  Wrong categories: Emission Exhaust System, EmissionExhaustSystem-Euro VI, Exhaust system, Exhaust system - D20, Exhaust system - gasoline engine, Fuel Storage & Handling, Fuel Tank & Canister
+  [DRY-RUN] Would remove these categories
+
+C00079024: NUT-SHAFT INTERMEDIATE GEAR
+  Wrong categories: JE11CF001 - SHAFT-BALANCER, Power Generation, SHAFT-BALANCER-D20, XE11CF001 - SHAFT-BALANCER
+  [DRY-RUN] Would remove these categories
+
+C00085309: NUT-TURBOCHARGER
+  Wrong categories: Exhaust Elbow&Turbocharger-D20, JE11CH001 - Exhaust ElbowandTurbocharger, Power Generation, XE11CH001 - Exhaust ElbowandTurbocharger
+  [DRY-RUN] Would remove these categories
+
+C00184779: O RING-FUEL FLRT
+  Wrong categories: Head Cover&PCV-D20, JE11CD001 - Head CoverandPCV, Power Generation, XE11CD001 - Head CoverandPCV
+  [DRY-RUN] Would remove these categories
+
+C00185652: O RING-HIGH PRESSURE PUMP
+  Wrong categories: JE11CI001 - Fuel System, Power Generation
+  [DRY-RUN] Would remove these categories
+
+C00265292: O RING-INJECTOR
+  Wrong categories: JE11CI001 - Fuel System, Power Generation, uel System-D20, XE11CI001 - Fuel System
+  [DRY-RUN] Would remove these categories
+
+C00180581: OIL PUMP BELT PULLEY
+  Wrong categories: JE11CM001 - Damper PulleyandGearDrive, Oil pumps&vacuum pumps&vacuum tube components-D20, Power Generation, XE11CM001 - Damper PulleyandGearDrive
+  [DRY-RUN] Would remove these categories
+
+C00084108: OVERRUNNING DECOUPLER- ALTERNATOR
+  Wrong categories: JE11CQ001 - AccessoryandAccessoryDrive, Power Generation
+  [DRY-RUN] Would remove these categories
+
+C00072983: PIN-CRANKSHAFT
+  Wrong categories: Crankshaft Rod-D20, JE11CE001 - Crankshaft Rod, Power Generation, XE11CE001 - Crankshaft Rod
+  [DRY-RUN] Would remove these categories
+
+C00107793: PLUG-CYLINDER HEAD WATER JACKET
+  Wrong categories: Cylinder Head-D20, JE11CC001 - Cylinder Head, Power Generation, XE11CC001 - Cylinder Head
+  [DRY-RUN] Would remove these categories
+
+C00198887: RETAINING RING-BALL BEARING
+  Wrong categories: Cylinder Block&Accessory-D20, JE11CB001 - Cylinder BlockandAccessory, 
+Power Generation, XE11CB001 - Cylinder BlockandAccessory
+  [DRY-RUN] Would remove these categories
+
+C00123710: RUBBER SPACER-WCAC SHOCK ABSORBER
+  Wrong categories: JE11CG001 - MANIFOLD ASM-INT, MANIFOLD ASM-INT-D20, Power Generation  
+  [DRY-RUN] Would remove these categories
+
+C00088809: RUBBER SPACER-WCAC SHOCK ABSORBER
+  Wrong categories: JE11CG001 - MANIFOLD ASM-INT, MANIFOLD ASM-INT-D20, Power Generation  
+  [DRY-RUN] Would remove these categories
+
+C00079141: SEAL RING CARRIER-FRONT END
+  Wrong categories: Crankshaft Rod-D20, JE11CE001 - Crankshaft Rod, Power Generation, XE11CE001 - Crankshaft Rod
+  [DRY-RUN] Would remove these categories
+
+C00184188: SEAL RING-CYLINDER HEAD THERMOSTAT ASSEMBLY
+  Wrong categories: Coolant Pump And Inl&OtltTube-D20, JE11CL001 - Coolant Pump And InlandOtltTubeandThermostat, Power Generation, XE11CL001 - Coolant Pump And InlandOtltTubeandThermostat
+  [DRY-RUN] Would remove these categories
+
+C00186591: SEAL RING-ELECTRONIC THROTTLE
+  Wrong categories: JE11CG001 - MANIFOLD ASM-INT, Power Generation, XE11CG001 - MANIFOLD ASM-INT
+  [DRY-RUN] Would remove these categories
+
+C00186582: SEAL RING-INTAKE MANIFOLD
+  Wrong categories: JE11CG001 - MANIFOLD ASM-INT, Power Generation, XE11CG001 - MANIFOLD ASM-INT
+  [DRY-RUN] Would remove these categories
+
+C00180586: SEAL RING-OIL PUMP INLET
+  Wrong categories: JE11CK001 - SumpandOil Suction PipeandDipstick, Power Generation, Sump&Oil Suction Pipe&Dipstick-D20, XE11CK001 - SumpandOil Suction PipeandDipstick
+  [DRY-RUN] Would remove these categories
+
+C00230356: SEAL-BELT COVER(UP)
+  Wrong categories: JE11CP001 - Timing Drive, Power Generation, Timing Drive-D20, XE11CP001 - Timing Drive
+  [DRY-RUN] Would remove these categories
+
+C00079037: SEAL-CAMSHAFT LIP
+  Wrong categories: Head Cover&PCV-D20, JE11CD001 - Head CoverandPCV, Power Generation, XE11CD001 - Head CoverandPCV
+  [DRY-RUN] Would remove these categories
+
+C00079034: SEAL-CRANKSHAFT FRONT OIL
+  Wrong categories: Crankshaft Rod-D20, JE11CE001 - Crankshaft Rod, Power Generation, XE11CE001 - Crankshaft Rod
+  [DRY-RUN] Would remove these categories
+
+C00079036: SEAL-CRANKSHAFT REAR OIL
+  Wrong categories: Crankshaft Rod-D20, JE11CE001 - Crankshaft Rod, Power Generation, XE11CE001 - Crankshaft Rod
+  [DRY-RUN] Would remove these categories
+
+C00079038: SEAL-VALVE STEM OIL
+  Wrong categories: Cylinder Head-D20, JE11CC001 - Cylinder Head, Power Generation, XE11CC001 - Cylinder Head
+  [DRY-RUN] Would remove these categories
+
+C00076388: SENSOR-HP EXHAUST GAS RECIRCULATION COOLER DOWNSTREAM TEMPERATURE
+  Wrong categories: JE11CR001 - SensorandHarness, Power Generation, Sensor&Harness-D20, XE11CR001 - SensorandHarness
+  [DRY-RUN] Would remove these categories
+
+C00075418: SENSOR-LAMP EXHAUST GAS RECIRCULATION PRESSURE DIFFERENCE
+  Wrong categories: JE11CR001 - SensorandHarness, Power Generation, Sensor&Harness-D20    
+  [DRY-RUN] Would remove these categories
+
+C00073038: SET-PISTON RING
+  Wrong categories: Crankshaft Rod-D20, JE11CE001 - Crankshaft Rod, Power Generation      
+  [DRY-RUN] Would remove these categories
+
+C00079022: SLEEVE-INTERMEDIATE GEAR MBS
+  Wrong categories: JE11CF001 - SHAFT-BALANCER, Power Generation, SHAFT-BALANCER-D20, XE11CF001 - SHAFT-BALANCER
+  [DRY-RUN] Would remove these categories
+
+C00077427: SPROCKET-CAMSHAFT TIMING
+  Wrong categories: JE11CP001 - Timing Drive, Power Generation, Timing Drive-D20, XE11CP001 - Timing Drive
+  [DRY-RUN] Would remove these categories
+
+C00290871: STRAP-BRAKE PIPE VACUUM
+  Wrong categories: Emission Exhaust System, EmissionExhaustSystem-Euro VI, Exhaust system - D20, Fuel Storage & Handling, Urea system, Urea system-D20
+  [DRY-RUN] Would remove these categories
+
+C00230235: STUD-ENGINE PUR COVER TO ENGINE
+  Wrong categories: JE11CX001 - Engine shield, Power Generation, XE11CX001 - Engine shield  [DRY-RUN] Would remove these categories
+
+C00085306: STUD-EXHAUST MANIFOLD
+  Wrong categories: Cylinder Head-D20, JE11CC001 - Cylinder Head, Power Generation, XE11CC001 - Cylinder Head
+  [DRY-RUN] Would remove these categories
+
+C00085307: STUD-TURBOCHARGER
+  Wrong categories: Exhaust Elbow&Turbocharger-D20, JE11CH001 - Exhaust ElbowandTurbocharger, Power Generation, XE11CH001 - Exhaust ElbowandTurbocharger
+  [DRY-RUN] Would remove these categories
+
+C00075417: SWITCH-OIL PRESSURE
+  Wrong categories: JE11CR001 - SensorandHarness, Power Generation, Sensor&Harness-D20, XE11CR001 - SensorandHarness
+  [DRY-RUN] Would remove these categories
+
+C00109635: THERMOSTAT ASSEMBLY-CYLINDER HEAD
+  Wrong categories: JE11CL001 - Coolant Pump And InlandOtltTubeandThermostat, Power Generation, XE11CL001 - Coolant Pump And InlandOtltTubeandThermostat
+  [DRY-RUN] Would remove these categories
+
+C00087383: VACUUM PIPE-TURBOCHARGER SOLENOID CONTROL VALVE TO EXECUTIVE UNIT
+  Wrong categories: JE11CR001 - SensorandHarness, JE11CS001 - EGR ASM, Oil pumps&vacuum pumps&vacuum tube components-D20, Power Generation, XE11CR001 - SensorandHarness, XE11CS001 
+- EGR ASM
+  [DRY-RUN] Would remove these categories
+
+C00073007: VACUUM PUMP OVERGEARED ASSY-ENGINE
+  Wrong categories: JE11CM001 - Damper PulleyandGearDrive, Oil pumps&vacuum pumps&vacuum tube components-D20, Power Generation, XE11CM001 - Damper PulleyandGearDrive
+  [DRY-RUN] Would remove these categories
+
+C00111120: VALVE-EXHAUST
+  Wrong categories: Cylinder Head-D20, JE11CC001 - Cylinder Head, Power Generation, XE11CC001 - Cylinder Head
+  [DRY-RUN] Would remove these categories
+
+C00073048: WASHER-CRANKSHAFT THRUST
+  Wrong categories: Crankshaft Rod-D20, JE11CE001 - Crankshaft Rod, Power Generation, XE11CE001 - Crankshaft Rod
+  [DRY-RUN] Would remove these categories
+
+C00308737: WASHER-EXHAUST MANIFOLD
+  Wrong categories: Emission Exhaust System, Exhaust system
+  [DRY-RUN] Would remove these categories
+
+C00265293: WASHER-INJECTOR
+  Wrong categories: JE11CI001 - Fuel System, Power Generation, uel System-D20, XE11CI001 - Fuel System
+  [DRY-RUN] Would remove these categories
+
+C00105159: WASHER-INJECTOR PRESSURE PLATE
+  Wrong categories: JE11CI001 - Fuel System, Power Generation, uel System-D20, XE11CI001 - Fuel System
+  [DRY-RUN] Would remove these categories
+
+C00088203: WASHER-MUFFLER ASSEMBLY
+  Wrong categories: Emission Exhaust System, Exhaust system
+  [DRY-RUN] Would remove these categories
+
+C00079023: WASHER-SHAFT INTERMEDIATE GEAR
+  Wrong categories: JE11CF001 - SHAFT-BALANCER, Power Generation, SHAFT-BALANCER-D20, XE11CF001 - SHAFT-BALANCER
+  [DRY-RUN] Would remove these categories
+
+C00185657: WASHER-UNIT VACUUM PUMP
+  Wrong categories: JE11CM001 - Damper PulleyandGearDrive, Oil pumps&vacuum pumps&vacuum t  [DRY-RUN] Would remove these categories
+
+C00210733: WHEEL-CRANKSHAFT RELUCTOR
+  Wrong categories: Crankshaft Rod-D20, JE11CE001 - Crankshaft Rod, Power Generation, XE11CE001 - Crankshaft Rod
+  [DRY-RUN] Would remove these categories
+
+
+================================================================================
+SUMMARY
+================================================================================
+Products to update: 132

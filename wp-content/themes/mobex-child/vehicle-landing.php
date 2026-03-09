@@ -63,7 +63,9 @@ foreach ($all_parents as $parent) {
         INNER JOIN {$wpdb->term_relationships} tr ON p.ID = tr.object_id
         INNER JOIN {$wpdb->term_taxonomy} tt ON tr.term_taxonomy_id = tt.term_taxonomy_id
         INNER JOIN {$wpdb->postmeta} pm ON p.ID = pm.post_id AND pm.meta_key = '_sku'
+        LEFT JOIN {$wpdb->postmeta} pm_var ON p.ID = pm_var.post_id AND pm_var.meta_key = 'attribute_pa_variant'
         INNER JOIN {$wpdb->prefix}sku_vin_mapping svm ON pm.meta_value = svm.sku
+            AND (svm.variant_attribute IS NULL OR svm.variant_attribute = '' OR svm.variant_attribute = pm_var.meta_value)
         WHERE tt.term_id IN ({$cat_ids_str})
         AND tt.taxonomy = 'product_cat'
         AND p.post_type IN ('product', 'product_variation')
